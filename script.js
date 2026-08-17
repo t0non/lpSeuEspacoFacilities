@@ -266,3 +266,38 @@ document.querySelectorAll('[data-year]').forEach(function(el) {
     });
   });
 })();
+
+/* =============================================
+   7. INSTITUTIONAL NAV — DROPDOWN + MOBILE SUBMENU
+   ============================================= */
+(function() {
+  // Scroll shadow on header
+  var header = document.getElementById('site-header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  }
+
+  // Mobile submenu toggles
+  document.querySelectorAll('.mob-sub-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      var sub = this.nextElementSibling;
+      if (sub) sub.classList.toggle('open', !expanded);
+      // rotate chevron
+      var icon = this.querySelector('.mob-sub-chevron');
+      if (icon) icon.style.transform = expanded ? '' : 'rotate(180deg)';
+    });
+  });
+
+  // Active nav link — highlight current page
+  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  document.querySelectorAll('.nav-a, .mob-a').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (!href) return;
+    var hPath = href.replace(/\/$/, '') || '/';
+    if (hPath === path) a.classList.add('nav-active');
+  });
+})();

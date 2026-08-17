@@ -4,19 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Facilities para Empresas em São Paulo | Seu Espaço</title>
-  <meta name="description" content="Soluções de facilities para empresas em São Paulo, com limpeza comercial, conservação e copeiragem. Solicite uma proposta personalizada." />
+  <meta name="description" content="Soluções terceirizadas de limpeza comercial, conservação e copeiragem para empresas em São Paulo. Conheça a Seu Espaço Facilities." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.seuespaco.com.br/" />
-  <meta property="og:title" content="Facilities para Empresas em São Paulo" />
-  <meta property="og:description" content="Soluções de facilities para empresas em São Paulo, com limpeza comercial, conservação e copeiragem. Solicite uma proposta personalizada." />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.seuespaco.com.br/" />
+  <meta property="og:title" content="Facilities para Empresas em São Paulo | Seu Espaço" />
+  <meta property="og:description" content="Soluções terceirizadas de limpeza comercial, conservação e copeiragem para empresas em São Paulo." />
+  <meta property="og:image" content="https://www.seuespaco.com.br/images/facilities-empresas-sao-paulo.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Facilities para Empresas em São Paulo | Seu Espaço" />
+  <meta name="twitter:description" content="Soluções terceirizadas de limpeza comercial, conservação e copeiragem para empresas em São Paulo." />
+
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
-  <!-- Google Tag Manager: replace GOOGLE_TAG_MANAGER_ID -->
-  <!-- Meta Pixel Code -->
+
+  <!-- Meta Pixel -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,93 +40,178 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=[META_PIXEL_ID]&ev=PageView&noscript=1"
   /></noscript>
-  <!-- End Meta Pixel Code -->
-  <!-- Google Ads: replace GOOGLE_ADS_ID -->
+
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Seu Espaço",
-    "image": "https://www.seuespaco.com.br/images/logo.png",
-    "url": "https://www.seuespaco.com.br/",
-    "telephone": "+5511988259447",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
-      "addressCountry": "BR"
-    },
-    "description": "Facilities, limpeza comercial e copeiragem para empresas em São Paulo."
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.seuespaco.com.br/#organization",
+        "name": "Seu Espaço Facilities",
+        "url": "https://www.seuespaco.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.seuespaco.com.br/images/logo.png"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55-11-98825-9447",
+          "contactType": "customer service",
+          "areaServed": "BR",
+          "availableLanguage": "Portuguese"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "São Paulo"
+        },
+        "description": "Soluções terceirizadas de limpeza comercial, conservação e copeiragem para empresas em São Paulo."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.seuespaco.com.br/#website",
+        "url": "https://www.seuespaco.com.br/",
+        "name": "Seu Espaço Facilities",
+        "publisher": { "@id": "https://www.seuespaco.com.br/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.seuespaco.com.br/#webpage",
+        "url": "https://www.seuespaco.com.br/",
+        "name": "Facilities para Empresas em São Paulo | Seu Espaço",
+        "description": "Soluções terceirizadas de limpeza comercial, conservação e copeiragem para empresas em São Paulo.",
+        "isPartOf": { "@id": "https://www.seuespaco.com.br/#website" }
+      }
+    ]
   }
   </script>
 </head>
 <body>
-  
-  <!-- HEADER -->
+
+  <!-- HEADER INSTITUCIONAL -->
   <header class="site-header" id="site-header" role="banner">
     <div class="container header-inner">
-      <a href="/" class="logo" aria-label="Seu Espaço — Página inicial">
-        <img src="/images/logo.png" alt="Seu Espaço" style="height: 72px; width: auto;" />
+      <a href="/" class="logo" aria-label="Seu Espaço Facilities — Página inicial">
+        <img src="/images/logo.png" alt="Seu Espaço Facilities" style="height:64px;width:auto;" />
       </a>
       <nav class="nav" role="navigation" aria-label="Navegação principal">
         <ul class="nav-list">
-          <li><a href="#servicos" class="nav-a">Serviços</a></li>
-          <li><a href="#para-quem" class="nav-a">Para quem</a></li>
-          <li><a href="/limpeza-comercial" class="nav-a">Limpeza Comercial</a></li>
-          <li><a href="/copeiragem" class="nav-a">Copeiragem</a></li>
+          <li><a href="/" class="nav-a nav-active">Home</a></li>
+          <li class="has-dropdown">
+            <a href="/servicos/" class="nav-a nav-a--has-dropdown">
+              Serviços
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="/servicos/limpeza-comercial/" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </span>
+                <span>
+                  <strong>Limpeza Comercial</strong>
+                  <small>Para escritórios, clínicas e empresas</small>
+                </span>
+              </a>
+              <a href="/servicos/copeiragem/" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+                </span>
+                <span>
+                  <strong>Copeiragem Corporativa</strong>
+                  <small>Apoio à copa, reuniões e atendimento</small>
+                </span>
+              </a>
+              <a href="/servicos/facilities/" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                </span>
+                <span>
+                  <strong>Facilities</strong>
+                  <small>Soluções operacionais integradas</small>
+                </span>
+              </a>
+            </div>
+          </li>
+          <li><a href="/sobre/" class="nav-a">Sobre</a></li>
+          <li><a href="/segmentos/" class="nav-a">Segmentos</a></li>
+          <li><a href="/contato/" class="nav-a">Contato</a></li>
         </ul>
       </nav>
-      <a href="limpeza-comercial.html#formulario" class="btn btn-primary btn-sm header-cta" id="cta-header" data-track="orcamento" data-loc="header">Solicitar orçamento</a>
+      <a href="https://wa.me/5511988259447?text=Ol%C3%A1%21+Gostaria+de+conhecer+as+solu%C3%A7%C3%B5es+da+Seu+Espa%C3%A7o+Facilities+para+minha+empresa." class="btn btn-primary btn-sm header-cta" id="cta-header-wa" data-track="whatsapp" data-loc="header" target="_blank" rel="noopener noreferrer">
+        Falar no WhatsApp
+      </a>
       <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false">
         <span class="hbar"></span><span class="hbar"></span><span class="hbar"></span>
       </button>
     </div>
     <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile" aria-hidden="true">
       <ul>
-        <li><a href="#servicos" class="mob-a">Serviços</a></li>
-        <li><a href="#para-quem" class="mob-a">Para quem</a></li>
-        <li><a href="/limpeza-comercial" class="mob-a">Limpeza Comercial</a></li>
-        <li><a href="/copeiragem" class="mob-a">Copeiragem</a></li>
+        <li><a href="/" class="mob-a">Home</a></li>
+        <li>
+          <button class="mob-a mob-sub-toggle" aria-expanded="false">
+            Serviços
+            <svg class="mob-sub-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="mob-submenu" aria-label="Submenu Serviços">
+            <li><a href="/servicos/" class="mob-sub-a">Todos os Serviços</a></li>
+            <li><a href="/servicos/limpeza-comercial/" class="mob-sub-a">Limpeza Comercial</a></li>
+            <li><a href="/servicos/copeiragem/" class="mob-sub-a">Copeiragem Corporativa</a></li>
+            <li><a href="/servicos/facilities/" class="mob-sub-a">Facilities</a></li>
+          </ul>
+        </li>
+        <li><a href="/sobre/" class="mob-a">Sobre</a></li>
+        <li><a href="/segmentos/" class="mob-a">Segmentos</a></li>
+        <li><a href="/contato/" class="mob-a">Contato</a></li>
       </ul>
-      <a href="limpeza-comercial.html#formulario" class="btn btn-primary mob-cta btn-full" data-track="orcamento" data-loc="mobile_menu">Solicitar orçamento</a>
+      <a href="https://wa.me/5511988259447?text=Ol%C3%A1%21+Gostaria+de+conhecer+as+solu%C3%A7%C3%B5es+da+Seu+Espa%C3%A7o+Facilities+para+minha+empresa." class="btn btn-primary mob-cta btn-full" data-track="whatsapp" data-loc="mobile_menu" target="_blank" rel="noopener noreferrer">
+        Falar no WhatsApp
+      </a>
     </nav>
   </header>
 
   <main>
 
-    <!-- HERO -->
+    <!-- SEÇÃO 1 — HERO -->
     <section class="home-hero" id="inicio" aria-label="Apresentação">
-      <div class="container home-hero-inner" style="grid-template-columns: 1fr; justify-items: center; text-align: center;">
-        <div class="fade-up" style="display: flex; flex-direction: column; align-items: center; max-width: 800px; margin: 0 auto;">
-          <div class="hero-badge" style="margin-bottom: 24px;">
+      <div class="container home-hero-inner">
+        <div class="fade-up">
+          <div class="hero-badge" style="margin-bottom:20px;">
             <span class="badge-dot" aria-hidden="true"></span>
-            Atendimento empresarial · São Paulo
+            FACILITIES PARA EMPRESAS EM SÃO PAULO
           </div>
-          <h1 class="display" style="font-size:clamp(38px, 5vw, 56px); line-height:1.15; font-weight:800; margin-bottom:16px;">Facilities para empresas em São Paulo</h1>
-          <p class="subtitle" style="font-size: clamp(20px, 3vw, 24px); font-weight:600; color:var(--accent); margin-bottom:16px;">Você cuida do seu negócio. Nós cuidamos da operação.</p>
-          <p class="subtitle" style="font-size: clamp(16px, 2vw, 18px); margin-bottom: 32px; max-width: 600px;">Soluções terceirizadas de limpeza comercial, conservação e copeiragem para a rotina do seu escritório.</p>
-          <div class="hero-cta-row" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
-            <a href="limpeza-comercial.html#formulario" class="btn btn-primary btn-lg" id="cta-hero-orcamento" data-track="orcamento" data-loc="hero">Solicitar orçamento</a>
-            <a href="#servicos" class="btn btn-ghost btn-lg" id="cta-hero-servicos">Conhecer nossos serviços</a>
+          <h1 class="display" style="margin-bottom:20px;">
+            Soluções terceirizadas para uma operação mais eficiente.
+          </h1>
+          <p class="subtitle" style="margin-bottom:36px;max-width:560px;">
+            A Seu Espaço Facilities oferece serviços de limpeza comercial, conservação e copeiragem para empresas que buscam mais organização, profissionalismo e praticidade na rotina.
+          </p>
+          <div class="hero-cta-row">
+            <a href="/servicos/" class="btn btn-primary btn-lg" id="cta-hero-servicos">
+              Conheça nossas soluções
+            </a>
+            <a href="https://wa.me/5511988259447?text=Ol%C3%A1%21+Gostaria+de+conhecer+as+solu%C3%A7%C3%B5es+da+Seu+Espa%C3%A7o+Facilities+para+minha+empresa." class="btn btn-ghost btn-lg" id="cta-hero-wa" data-track="whatsapp" data-loc="hero" target="_blank" rel="noopener noreferrer">
+              Falar com nossa equipe
+            </a>
           </div>
-          <div class="hero-note" style="justify-content: center; margin-top: 0; gap: 24px;">
+          <div class="hero-note" style="margin-top:28px;">
             <span class="hero-note-item">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Atendimento empresarial
+              Atendimento B2B
             </span>
             <span class="hero-note-item">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Equipe preparada
+              Soluções recorrentes
             </span>
             <span class="hero-note-item">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Propostas personalizadas
+              Proposta personalizada
             </span>
           </div>
         </div>
         <div class="hero-img-wrap fade-right">
           <div class="hero-img-container">
-            <img src="/images/facilities-empresas-sao-paulo.jpg" class="hero-img" alt="Equipe de facilities em uniforme corporativo trabalhando em escritório moderno em São Paulo" width="620" height="460" loading="eager" />
+            <img src="/images/facilities-empresas-sao-paulo.jpg" class="hero-img" alt="Ambiente corporativo profissional com equipe de facilities em São Paulo" width="620" height="460" loading="eager" />
             <div class="hero-img-chip" aria-hidden="true">
               <div class="chip-icon">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -133,113 +227,105 @@
     </section>
 
     <!-- TRUST BAR -->
-    <div class="trust-bar" aria-label="Diferenciais rápidos">
+    <div class="trust-bar" aria-label="Diferenciais">
       <div class="trust-bar-inner">
         <div class="trust-i">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          Atendimento B2B
+          Atendimento empresarial
         </div>
         <div class="trust-sep" aria-hidden="true"></div>
         <div class="trust-i">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          Equipe preparada
+          Limpeza comercial
         </div>
         <div class="trust-sep" aria-hidden="true"></div>
         <div class="trust-i">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          Gestão da operação
+          Copeiragem corporativa
         </div>
         <div class="trust-sep" aria-hidden="true"></div>
         <div class="trust-i">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          Soluções recorrentes
+          Facilities em São Paulo
         </div>
       </div>
     </div>
 
-    <!-- SEO LOCAL -->
-    <section class="section-pad bg-white" aria-labelledby="seo-local-title">
-      <div class="container">
-        <div class="section-head fade-up">
-          <h2 class="title" id="seo-local-title">Facilities para empresas em São Paulo</h2>
-          <p class="subtitle" style="max-width:800px; margin: 0 auto; text-align:center;">Empresas de diferentes regiões de São Paulo precisam de soluções de limpeza, conservação e apoio operacional que acompanhem suas rotinas. A Seu Espaço oferece serviços de facilities para empresas que buscam terceirizar essas atividades e manter seus ambientes organizados, para que possam focar no que fazem de melhor.</p>
+    <!-- SEÇÃO 2 — INTRO -->
+    <section class="intro-section" aria-labelledby="intro-title">
+      <div class="container intro-inner">
+        <div class="intro-text fade-left">
+          <span class="label label--light">Por que terceirizar</span>
+          <h2 class="title title--light" id="intro-title">
+            Uma empresa para cuidar daquilo que mantém sua operação funcionando.
+          </h2>
+          <p>
+            A rotina de uma empresa envolve inúmeras atividades que precisam acontecer todos os dias. Limpeza, conservação, copa — são tarefas essenciais que exigem gestão, profissionais e acompanhamento contínuo.
+          </p>
+          <p>
+            A terceirização permite que sua equipe mantenha o foco no negócio enquanto profissionais especializados assumem determinadas atividades operacionais com regularidade e profissionalismo.
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- BENEFÍCIOS -->
-    <section class="section-pad bg-off" aria-labelledby="beneficios-title">
-      <div class="container">
-        <div class="section-head fade-up">
-          <span class="label">Por que terceirizar</span>
-          <h2 class="title" id="beneficios-title">Sua empresa não precisa administrar tudo.</h2>
-          <p class="subtitle subtitle--center">Contratar, treinar, acompanhar faltas, organizar rotinas e cobrar a execução da limpeza consome tempo da equipe. A terceirização permite colocar essa operação nas mãos de uma empresa especializada.</p>
-        </div>
-        <div class="cards-3">
-          <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 class="card-title">Menos preocupação operacional</h3>
-            <p class="card-text">A gestão da equipe de limpeza, as trocas e a organização das rotinas ficam com uma empresa especializada.</p>
+        <div class="intro-stats fade-right">
+          <div class="intro-stat">
+            <div class="intro-stat-val">B2B</div>
+            <div class="intro-stat-label">Atendimento exclusivo para empresas</div>
           </div>
-          <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
-            <h3 class="card-title">Uma rotina mais organizada</h3>
-            <p class="card-text">Frequências definidas, padrão de execução e continuidade do serviço sem depender de decisões operacionais internas.</p>
+          <div class="intro-stat">
+            <div class="intro-stat-val">SP</div>
+            <div class="intro-stat-label">Atuação em São Paulo</div>
           </div>
-          <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <h3 class="card-title">Mais tempo para cuidar do negócio</h3>
-            <p class="card-text">Sua equipe permanece focada no que realmente gera resultado para a empresa.</p>
+          <div class="intro-stat">
+            <div class="intro-stat-val">3</div>
+            <div class="intro-stat-label">Soluções especializadas</div>
+          </div>
+          <div class="intro-stat">
+            <div class="intro-stat-val">360°</div>
+            <div class="intro-stat-label">Apoio à rotina operacional</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVIÇOS -->
+    <!-- SEÇÃO 3 — SERVIÇOS -->
     <section class="section-pad bg-off" id="servicos" aria-labelledby="servicos-title">
       <div class="container">
         <div class="section-head fade-up">
-          <span class="label">Nossos serviços</span>
-          <h2 class="title" id="servicos-title">Soluções de facilities para a sua empresa.</h2>
-          <p class="subtitle subtitle--center">Escolha o serviço que sua operação precisa ou monte uma solução personalizada.</p>
+          <span class="label">Nossas soluções</span>
+          <h2 class="title" id="servicos-title">Serviços terceirizados pensados para diferentes necessidades da rotina empresarial.</h2>
+          <p class="subtitle subtitle--center">Escolha a solução que melhor se adapta à operação da sua empresa.</p>
         </div>
         <div class="cards-3">
-          <div class="card card--featured fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <div class="svc-card fade-up">
+            <div class="svc-card-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </div>
-            <h3 class="card-title">Limpeza Comercial</h3>
-            <p class="card-text">Terceirização de limpeza e conservação para empresas, clínicas, consultórios e escritórios. Nossa solução principal.</p>
-            <a href="/limpeza-comercial" class="card-link" id="cta-card-limpeza">
-              Conhecer limpeza comercial
+            <h3 class="svc-card-title">Limpeza Comercial</h3>
+            <p class="svc-card-text">Serviços de limpeza e conservação para ambientes corporativos — escritórios, clínicas, condomínios e empresas de diferentes portes.</p>
+            <a href="/servicos/limpeza-comercial/" class="svc-card-link" id="cta-svc-limpeza">
+              Conhecer solução
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
-          <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          <div class="svc-card fade-up">
+            <div class="svc-card-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
             </div>
-            <h3 class="card-title">Facilities</h3>
-            <p class="card-text">Soluções terceirizadas para apoiar a rotina e a operação de empresas com profissionalismo e continuidade.</p>
-            <a href="/limpeza-comercial" class="card-link" id="cta-card-facilities">
-              Conhecer facilities
+            <h3 class="svc-card-title">Copeiragem Corporativa</h3>
+            <p class="svc-card-text">Apoio à rotina de copa, reuniões e atendimento em ambientes empresariais. Profissionais preparados para a rotina corporativa da sua empresa.</p>
+            <a href="/servicos/copeiragem/" class="svc-card-link" id="cta-svc-copeiragem">
+              Conhecer solução
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
-          <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+          <div class="svc-card fade-up">
+            <div class="svc-card-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
             </div>
-            <h3 class="card-title">Copeiragem Corporativa</h3>
-            <p class="card-text">Profissionais preparados para cuidar da copa, café e suporte à rotina corporativa da sua empresa.</p>
-            <a href="/copeiragem" class="card-link" id="cta-card-copeiragem">
-              Conhecer copeiragem
+            <h3 class="svc-card-title">Facilities</h3>
+            <p class="svc-card-text">Soluções terceirizadas para apoiar diferentes necessidades operacionais da empresa, com foco em organização, continuidade e praticidade.</p>
+            <a href="/servicos/facilities/" class="svc-card-link" id="cta-svc-facilities">
+              Conhecer solução
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -247,86 +333,294 @@
       </div>
     </section>
 
-    <!-- PARA QUEM -->
+    <!-- SEÇÃO 4 — PARA QUEM -->
     <section class="section-pad bg-white" id="para-quem" aria-labelledby="paraquem-title">
       <div class="container">
         <div class="section-head fade-up">
-          <span class="label">Para quem atendemos</span>
-          <h2 class="title" id="paraquem-title">Para empresas que precisam de uma operação que funcione.</h2>
+          <span class="label">Segmentos atendidos</span>
+          <h2 class="title" id="paraquem-title">Atendemos diferentes ambientes empresariais.</h2>
+          <p class="subtitle subtitle--center">Cada ambiente tem necessidades específicas. Conheça os segmentos em que atuamos.</p>
         </div>
         <div class="seg-grid">
           <div class="seg-card fade-up">
             <div class="seg-img-wrap">
-              <img src="/images/clinic.jpg" alt="Recepção de clínica médica limpa e organizada em São Paulo" loading="lazy" width="400" height="300" />
-              <div class="seg-img-overlay" aria-hidden="true"></div>
-            </div>
-            <div class="seg-body">
-              <h3 class="seg-title">Clínicas e Consultórios</h3>
-              <p class="seg-text">Ambientes onde organização e cuidado fazem parte da experiência do paciente e do cliente.</p>
-            </div>
-          </div>
-          <div class="seg-card fade-up">
-            <div class="seg-img-wrap">
-              <img src="/images/office.jpg" alt="Escritório corporativo limpo e organizado em São Paulo" loading="lazy" width="400" height="300" />
+              <img src="/images/office.jpg" alt="Escritório corporativo organizado e limpo em São Paulo" loading="lazy" width="400" height="300" />
               <div class="seg-img-overlay" aria-hidden="true"></div>
             </div>
             <div class="seg-body">
               <h3 class="seg-title">Escritórios</h3>
-              <p class="seg-text">Para manter o ambiente organizado sem criar mais uma função para sua equipe.</p>
+              <p class="seg-text">Ambientes organizados para equipes, clientes e reuniões, com rotina de limpeza e conservação adequada ao fluxo da empresa.</p>
             </div>
           </div>
           <div class="seg-card fade-up">
             <div class="seg-img-wrap">
-              <img src="/images/condominium.jpg" alt="Lobby de condomínio limpo e conservado em São Paulo" loading="lazy" width="400" height="300" />
+              <img src="/images/clinic.jpg" alt="Clínica médica limpa e organizada em São Paulo" loading="lazy" width="400" height="300" />
+              <div class="seg-img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="seg-body">
+              <h3 class="seg-title">Clínicas e Consultórios</h3>
+              <p class="seg-text">Limpeza e apoio operacional para ambientes que precisam transmitir organização, cuidado e profissionalismo ao paciente e ao cliente.</p>
+            </div>
+          </div>
+          <div class="seg-card fade-up">
+            <div class="seg-img-wrap">
+              <img src="/images/condominium.jpg" alt="Condomínio com áreas comuns limpas e conservadas em São Paulo" loading="lazy" width="400" height="300" />
               <div class="seg-img-overlay" aria-hidden="true"></div>
             </div>
             <div class="seg-body">
               <h3 class="seg-title">Condomínios</h3>
-              <p class="seg-text">Soluções para manutenção e conservação de áreas comuns com regularidade.</p>
+              <p class="seg-text">Soluções para apoiar a limpeza e conservação das áreas comuns com frequência e padrão de execução adequados.</p>
             </div>
           </div>
           <div class="seg-card fade-up">
             <div class="seg-img-wrap">
-              <img src="/images/corporate.jpg" alt="Hall de entrada de sede corporativa impecável em São Paulo" loading="lazy" width="400" height="300" />
+              <img src="/images/corporate.jpg" alt="Sede corporativa com ambiente limpo e profissional em São Paulo" loading="lazy" width="400" height="300" />
               <div class="seg-img-overlay" aria-hidden="true"></div>
             </div>
             <div class="seg-body">
               <h3 class="seg-title">Empresas</h3>
-              <p class="seg-text">Estruturas personalizadas de acordo com a necessidade e o tamanho da operação.</p>
+              <p class="seg-text">Serviços terceirizados adaptados à rotina e às necessidades de cada operação, independente do porte ou segmento.</p>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+          <a href="/segmentos/" class="btn btn-ghost" id="cta-ver-segmentos">Ver todos os segmentos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5 — COMO FUNCIONA -->
+    <section class="section-pad bg-off" aria-labelledby="como-title">
+      <div class="container">
+        <div class="section-head fade-up">
+          <span class="label">Como funciona</span>
+          <h2 class="title" id="como-title">Entendemos sua necessidade antes de propor uma solução.</h2>
+          <p class="subtitle subtitle--center">Um processo simples e objetivo para chegar à solução certa para a sua empresa.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-item fade-up">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Entendimento</h3>
+            <p class="step-text">Conhecemos a rotina, a estrutura e as necessidades operacionais da empresa.</p>
+          </div>
+          <div class="step-item fade-up">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Avaliação</h3>
+            <p class="step-text">Analisamos o ambiente, o fluxo de pessoas e o tipo de serviço necessário.</p>
+          </div>
+          <div class="step-item fade-up">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Proposta</h3>
+            <p class="step-text">Apresentamos uma solução adequada à operação, com frequências e escopo definidos.</p>
+          </div>
+          <div class="step-item fade-up">
+            <div class="step-num">04</div>
+            <h3 class="step-title">Início da Operação</h3>
+            <p class="step-text">Após a contratação, a operação é organizada de acordo com o planejamento definido.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6 — SOBRE (prévia) -->
+    <section class="section-pad bg-white" aria-labelledby="sobre-prev-title">
+      <div class="container">
+        <div class="about-preview-grid">
+          <div class="about-preview-img fade-left">
+            <img src="/images/differentials.jpg" alt="Equipe profissional da Seu Espaço Facilities em ambiente corporativo" loading="lazy" width="600" height="450" />
+          </div>
+          <div class="about-preview-content fade-right">
+            <span class="label">Sobre a empresa</span>
+            <h2 class="title" id="sobre-prev-title">Sobre a Seu Espaço Facilities</h2>
+            <p>
+              A Seu Espaço Facilities atua com soluções terceirizadas para empresas, oferecendo serviços voltados à limpeza, conservação, copeiragem e apoio à rotina operacional.
+            </p>
+            <p>
+              Nosso objetivo é assumir atividades que fazem parte do dia a dia das empresas para que seus gestores e equipes possam manter o foco em suas principais responsabilidades.
+            </p>
+            <p>
+              Trabalhamos com empresas de diferentes segmentos e portes, sempre buscando entender a realidade de cada operação antes de propor uma solução.
+            </p>
+            <a href="/sobre/" class="btn btn-primary" id="cta-sobre">Conheça a Seu Espaço</a>
+            <div>
+              <span class="about-placeholder-note">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Em breve: história, equipe e diferenciais
+              </span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- REGIÕES DE ATENDIMENTO -->
-    <section class="section-pad bg-off" aria-labelledby="regioes-title">
+    <!-- SEÇÃO 7 — DIFERENCIAIS -->
+    <section class="section-pad bg-off" aria-labelledby="dif-title">
       <div class="container">
         <div class="section-head fade-up">
-          <h2 class="title" id="regioes-title">Regiões de atendimento</h2>
-          <p class="subtitle subtitle--center">Atendemos empresas na região metropolitana.</p>
+          <span class="label">Por que terceirizar</span>
+          <h2 class="title" id="dif-title">O que muda quando você terceiriza.</h2>
+          <p class="subtitle subtitle--center">Veja o que a terceirização representa na prática para a rotina da sua empresa.</p>
         </div>
-        <div class="fade-up" style="display:flex; justify-content:center;">
-          <ul class="regioes-list" style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; list-style:none; padding:0;">
-            <li style="padding:12px 24px; background:var(--white); border:1px solid var(--gray-100); border-radius:8px; font-weight:600; color:var(--navy);">São Paulo</li>
-            <!-- [ATENDIMENTO_REGIONAIS] -->
-          </ul>
+        <div class="diff-grid">
+          <div class="diff-card fade-up">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h3 class="diff-title">Mais foco no negócio</h3>
+              <p class="diff-text">Reduza a necessidade de dedicar tempo da equipe interna à gestão de atividades operacionais que podem ser terceirizadas.</p>
+            </div>
+          </div>
+          <div class="diff-card fade-up">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div>
+              <h3 class="diff-title">Rotina organizada</h3>
+              <p class="diff-text">Conte com uma operação estruturada, com frequências definidas e continuidade do serviço sem depender de decisões internas.</p>
+            </div>
+          </div>
+          <div class="diff-card fade-up">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3 class="diff-title">Solução personalizada</h3>
+              <p class="diff-text">Cada empresa possui uma rotina diferente. A solução é definida de acordo com a realidade e as necessidades específicas do ambiente.</p>
+            </div>
+          </div>
+          <div class="diff-card fade-up">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <h3 class="diff-title">Atendimento empresarial</h3>
+              <p class="diff-text">Atuação direcionada às necessidades de ambientes corporativos, com foco em continuidade, profissionalismo e organização.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA ESCURO -->
-    <section class="dark-cta" aria-labelledby="dark-cta-title">
-      <div class="dark-cta-inner fade-up">
-        <span class="label label--light">Proposta personalizada</span>
-        <h2 class="title title--light" id="dark-cta-title">Está procurando uma equipe para assumir essa operação?</h2>
-        <p class="subtitle subtitle--light subtitle--center">Conte para nós como funciona sua empresa e receba uma proposta personalizada.</p>
-        <div class="dark-cta-btns">
-          <a href="limpeza-comercial.html#formulario" class="btn btn-white btn-xl" id="cta-dark-orcamento" data-track="orcamento" data-loc="dark_cta">Solicitar orçamento</a>
-          <a href="https://wa.me/5511988259447?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+solicitar+um+or%C3%A7amento+de+facilities." class="btn btn-ghost-light btn-xl" target="_blank" rel="noopener noreferrer" id="cta-dark-wa" data-track="whatsapp" data-loc="dark_cta">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Falar pelo WhatsApp
+    <!-- SEÇÃO 8 — REGIÃO -->
+    <section class="region-section" aria-labelledby="regiao-title">
+      <div class="container region-inner">
+        <div class="region-text fade-left">
+          <span class="label label--light">Área de atuação</span>
+          <h2 class="title title--light" id="regiao-title">Atendimento empresarial em São Paulo.</h2>
+          <p>
+            A Seu Espaço Facilities atende empresas em São Paulo e regiões onde sua operação está disponível, oferecendo soluções terceirizadas de limpeza comercial, conservação e copeiragem.
+          </p>
+          <div class="region-cities">
+            <span class="region-city">São Paulo</span>
+            <!-- [ADICIONAR_CIDADES_REAIS] -->
+          </div>
+          <p class="region-placeholder">Outras regiões atendidas serão adicionadas conforme expansão da operação.</p>
+        </div>
+        <div class="fade-right" style="display:flex;flex-direction:column;gap:16px;">
+          <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:28px;">
+            <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.5);margin-bottom:10px;">Nossos serviços na região</div>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.85);font-size:15px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Limpeza Comercial e Conservação
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.85);font-size:15px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Copeiragem Corporativa
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.85);font-size:15px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Facilities e Apoio Operacional
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 9 — CTA INSTITUCIONAL -->
+    <section class="inst-cta-section" aria-labelledby="inst-cta-title">
+      <div class="inst-cta-inner fade-up">
+        <span class="label">Fale com nossa equipe</span>
+        <h2 class="title" id="inst-cta-title">Vamos entender o que sua empresa precisa?</h2>
+        <p>
+          Fale com nossa equipe e explique um pouco sobre sua operação. A partir dessas informações, podemos avaliar a solução mais adequada para a realidade da sua empresa.
+        </p>
+        <div class="inst-cta-btns">
+          <a href="/contato/" class="btn btn-primary btn-lg" id="cta-inst-contato">
+            Solicitar proposta
           </a>
+          <a href="https://wa.me/5511988259447?text=Ol%C3%A1%21+Gostaria+de+conhecer+as+solu%C3%A7%C3%B5es+da+Seu+Espa%C3%A7o+Facilities+para+minha+empresa." class="btn btn-wa btn-lg" id="cta-inst-wa" data-track="whatsapp" data-loc="inst_cta" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 10 — FAQ -->
+    <section class="section-pad bg-white" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head fade-up">
+          <span class="label">Dúvidas frequentes</span>
+          <h2 class="title" id="faq-title">Perguntas frequentes</h2>
+        </div>
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" aria-expanded="false" id="faq-1-btn" aria-controls="faq-1-content">
+              Quais serviços a Seu Espaço Facilities oferece?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content" id="faq-1-content" role="region" aria-labelledby="faq-1-btn">
+              <p class="faq-text">A Seu Espaço Facilities oferece serviços de limpeza comercial e conservação, copeiragem corporativa e soluções de facilities para empresas. Cada serviço pode ser contratado de forma independente ou combinada, de acordo com a necessidade da operação.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" aria-expanded="false" id="faq-2-btn" aria-controls="faq-2-content">
+              Quais tipos de empresas podem contratar os serviços?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content" id="faq-2-content" role="region" aria-labelledby="faq-2-btn">
+              <p class="faq-text">Atendemos empresas de diferentes segmentos, incluindo escritórios, clínicas, consultórios, condomínios e outros ambientes corporativos. Os serviços são voltados exclusivamente para o atendimento B2B.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" aria-expanded="false" id="faq-3-btn" aria-controls="faq-3-content">
+              A empresa atende quais regiões?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content" id="faq-3-content" role="region" aria-labelledby="faq-3-btn">
+              <p class="faq-text">Atualmente atendemos empresas em São Paulo. Caso tenha dúvidas sobre a disponibilidade do serviço para a sua região, entre em contato com nossa equipe para verificar a cobertura.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" aria-expanded="false" id="faq-4-btn" aria-controls="faq-4-content">
+              Como funciona a contratação?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content" id="faq-4-content" role="region" aria-labelledby="faq-4-btn">
+              <p class="faq-text">O processo começa com um contato inicial para entender as necessidades da empresa. Em seguida, avaliamos o ambiente e a operação, e apresentamos uma proposta com escopo, frequência e condições do serviço. Após a aprovação, organizamos o início da operação.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" aria-expanded="false" id="faq-5-btn" aria-controls="faq-5-content">
+              Como solicitar uma proposta?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content" id="faq-5-content" role="region" aria-labelledby="faq-5-btn">
+              <p class="faq-text">Você pode solicitar uma proposta pelo WhatsApp, pelo formulário de contato ou diretamente com nossa equipe pelo telefone. Basta nos informar um pouco sobre a empresa, o tipo de ambiente e o serviço de interesse.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" aria-expanded="false" id="faq-6-btn" aria-controls="faq-6-content">
+              É possível contratar serviços recorrentes?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content" id="faq-6-content" role="region" aria-labelledby="faq-6-btn">
+              <p class="faq-text">Sim. Os serviços podem ser contratados de forma recorrente, com frequências definidas de acordo com a necessidade da operação — diária, semanal ou conforme acordado. A regularidade é um dos principais benefícios da terceirização.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -337,10 +631,10 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
       <div>
-        <a href="/" class="logo footer-logo" aria-label="Seu Espaço — Início">
-          <img src="/images/logo.png" alt="Seu Espaço" style="height: 60px; width: auto;" />
+        <a href="/" class="logo footer-logo" aria-label="Seu Espaço Facilities — Início">
+          <img src="/images/logo.png" alt="Seu Espaço Facilities" style="height:56px;width:auto;" />
         </a>
-        <p class="footer-desc">Soluções profissionais de limpeza comercial, conservação e copeiragem para empresas em São Paulo.</p>
+        <p class="footer-desc">Soluções terceirizadas de limpeza comercial, conservação e copeiragem para empresas em São Paulo.</p>
         <div class="footer-social">
           <a href="https://share.google/EpGStYPHH48AmYgyb" class="soc-a" target="_blank" rel="noopener noreferrer" aria-label="Google Meu Negócio">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/></svg>
@@ -353,63 +647,63 @@
           </a>
         </div>
       </div>
-      <nav aria-label="Páginas">
-        <h3 class="footer-col-title">Navegação</h3>
+      <nav aria-label="Empresa">
+        <h3 class="footer-col-title">Empresa</h3>
         <ul class="footer-links">
           <li><a href="/" class="footer-link">Home</a></li>
-          <li><a href="#servicos" class="footer-link">Serviços</a></li>
-          <li><a href="#para-quem" class="footer-link">Para quem</a></li>
+          <li><a href="/sobre/" class="footer-link">Sobre</a></li>
+          <li><a href="/segmentos/" class="footer-link">Segmentos</a></li>
+          <li><a href="/contato/" class="footer-link">Contato</a></li>
+          <li><a href="/blog/" class="footer-link">Blog</a></li>
         </ul>
       </nav>
-      <nav aria-label="Landing pages">
+      <nav aria-label="Serviços">
         <h3 class="footer-col-title">Serviços</h3>
         <ul class="footer-links">
-          <li><a href="limpeza-comercial.html" class="footer-link">Limpeza Comercial</a></li>
-          <li><a href="limpeza-comercial.html" class="footer-link">Facilities</a></li>
-          <li><a href="copeiragem.html" class="footer-link">Copeiragem Corporativa</a></li>
+          <li><a href="/servicos/" class="footer-link">Todos os serviços</a></li>
+          <li><a href="/servicos/limpeza-comercial/" class="footer-link">Limpeza Comercial</a></li>
+          <li><a href="/servicos/copeiragem/" class="footer-link">Copeiragem Corporativa</a></li>
+          <li><a href="/servicos/facilities/" class="footer-link">Facilities</a></li>
         </ul>
       </nav>
       <div>
-        <h3 class="footer-col-title">Seu Espaço</h3>
-        <p class="footer-desc">Facilities, limpeza comercial e copeiragem para empresas em São Paulo.</p>
-        <div class="footer-contacts" itemscope itemtype="https://schema.org/LocalBusiness">
-          <meta itemprop="name" content="Seu Espaço">
-          <meta itemprop="image" content="https://www.seuespaco.com.br/images/logo.png">
-          <div class="footer-ci" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span itemprop="streetAddress">[ENDEREÇO REAL]</span>
-          </div>
+        <h3 class="footer-col-title">Contato</h3>
+        <div class="footer-contacts">
           <div class="footer-ci">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            <a href="https://wa.me/5511988259447" target="_blank" rel="noopener noreferrer" data-track="phone" data-loc="footer">+55 (11) 98825-9447</a>
+            <a href="https://wa.me/5511988259447" target="_blank" rel="noopener noreferrer" data-track="whatsapp" data-loc="footer">+55 (11) 98825-9447</a>
           </div>
           <div class="footer-ci">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            <a href="tel:5511988259447" itemprop="telephone" data-track="phone" data-loc="footer">+55 (11) 98825-9447</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.11 12 19.79 19.79 0 011.04 3.4 2 2 0 013 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+5511988259447">+55 (11) 98825-9447</a>
           </div>
           <div class="footer-ci">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:contato@[DOMINIO].com.br" itemprop="email" data-track="phone" data-loc="footer">contato@[DOMINIO].com.br</a>
+            <a href="mailto:contato@[DOMINIO].com.br">contato@[DOMINIO].com.br</a>
+          </div>
+          <div class="footer-ci">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>São Paulo — SP</span>
           </div>
           <div class="footer-ci">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span itemprop="openingHours" content="Mo-Fr 08:00-18:00">Seg a Sex, 08h às 18h</span>
+            <span>Seg a Sex, 08h às 18h</span>
           </div>
         </div>
       </div>
     </div>
     <div class="footer-bar">
       <div class="container footer-bar-inner">
-        <p>© <span data-year></span> [NOME DA EMPRESA]. Todos os direitos reservados.</p>
+        <p>© <span data-year></span> Seu Espaço Facilities. Todos os direitos reservados.</p>
         <p>Limpeza Comercial · Facilities · Copeiragem · São Paulo</p>
       </div>
     </div>
   </footer>
 
   <!-- WHATSAPP FLOAT -->
-  <a href="https://wa.me/5511988259447?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+solicitar+um+or%C3%A7amento+de+facilities." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento pelo WhatsApp" id="wa-float-home" data-track="whatsapp" data-loc="float_home">
+  <a href="https://wa.me/5511988259447?text=Ol%C3%A1%21+Gostaria+de+conhecer+as+solu%C3%A7%C3%B5es+da+Seu+Espa%C3%A7o+Facilities+para+minha+empresa." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Falar com a equipe pelo WhatsApp" id="wa-float-home" data-track="whatsapp" data-loc="float_home">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    <span class="wa-float-label">Solicitar orçamento</span>
+    <span class="wa-float-label">Falar no WhatsApp</span>
   </a>
 
   <script src="/script.js"></script>

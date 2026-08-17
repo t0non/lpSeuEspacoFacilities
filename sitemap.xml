@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- SITE INSTITUCIONAL -->
   <url>
     <loc>https://www.seuespaco.com.br/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.seuespaco.com.br/limpeza-comercial</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.seuespaco.com.br/sobre/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seuespaco.com.br/servicos/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.seuespaco.com.br/copeiragem</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.seuespaco.com.br/servicos/limpeza-comercial/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seuespaco.com.br/servicos/copeiragem/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seuespaco.com.br/servicos/facilities/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seuespaco.com.br/segmentos/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seuespaco.com.br/contato/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- LANDING PAGES DE PERFORMANCE (META ADS) -->
+  <url>
+    <loc>https://www.seuespaco.com.br/limpeza-comercial/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.seuespaco.com.br/copeiragem/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

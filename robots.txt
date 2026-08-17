@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /obrigado/
 
 Sitemap: https://www.seuespaco.com.br/sitemap.xml
