@@ -399,9 +399,9 @@ h1.lp-h1{
 }
 
 /* --- HOW IT WORKS --- */
-.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
 .how-grid::before{
-  content:'';position:absolute;top:36px;left:calc(12.5% + 12px);right:calc(12.5% + 12px);
+  content:'';position:absolute;top:60px;left:calc(16.66% + 12px);right:calc(16.66% + 12px);
   height:2px;background:linear-gradient(to right,var(--accent),var(--teal));opacity:.18
 }
 .how-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 12px}
