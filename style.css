@@ -581,6 +581,11 @@ h1.lp-h1{
 .seg-grid .seg-card:nth-child(3){transition-delay:.16s}
 .seg-grid .seg-card:nth-child(4){transition-delay:.24s}
 
+/* --- MECHANISM (ANTES/DEPOIS) --- */
+.mech-grid{display:flex;flex-wrap:wrap;gap:24px;max-width:1000px;margin:0 auto;align-items:stretch}
+.mech-card{flex:1;min-width:260px;background:var(--white);border:1px solid var(--gray-200);border-radius:12px;padding:40px;display:flex;flex-direction:column}
+.mech-card-featured{flex:1;min-width:260px;background:var(--white);border:2px solid var(--accent);border-radius:12px;padding:40px;box-shadow:0 8px 24px rgba(9, 85, 136, 0.1);display:flex;flex-direction:column;position:relative}
+
 /* --- FOCUS --- */
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 
@@ -625,10 +630,11 @@ h1.lp-h1{
   .cards-4,.cards-3,.cards-2{grid-template-columns:1fr;gap:14px}
   .seg-grid{grid-template-columns:1fr;gap:14px}
   .how-grid{grid-template-columns:1fr;gap:24px}
-  .how-step{flex-direction:row;text-align:left;gap:18px;align-items:flex-start}
+  .how-step{flex-direction:column;text-align:center;gap:12px;align-items:center}
+  .how-step img { width: 80px !important; margin-bottom: 12px !important; }
   .how-num{min-width:56px;width:56px;height:56px;font-size:16px;margin-bottom:0}
-  .mech-wrap{flex-direction:column;align-items:center;gap:6px}
-  .mech-arrow{transform:rotate(90deg);padding:4px 0}
+  .mech-grid { gap: 16px }
+  .mech-card, .mech-card-featured { padding: 24px; min-width: unset; width: 100%; }
   .dark-cta{padding-block:64px}
   .dark-cta-btns{flex-direction:column;align-items:stretch}
   .dark-cta-btns .btn{width:100%;justify-content:center}
