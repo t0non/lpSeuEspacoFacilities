@@ -147,7 +147,7 @@ h3.card-title{
   border-bottom:1px solid var(--gray-100);transition:box-shadow var(--t)
 }
 .site-header.scrolled{box-shadow:var(--sh-sm)}
-.header-inner{display:flex;align-items:center;gap:28px;height:68px}
+.header-inner{display:flex;align-items:center;gap:28px;min-height:80px;padding:12px 0}
 
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .logo-mark{
@@ -194,7 +194,7 @@ h3.card-title{
 .lp-header.scrolled{box-shadow:var(--sh-sm)}
 .lp-header-inner{
   display:flex;align-items:center;justify-content:space-between;
-  gap:20px;height:64px
+  gap:20px;min-height:80px;padding:12px 0;
 }
 .lp-header-note{font-size:13px;color:var(--gray-400)}
 @media(max-width:640px){.lp-header-note{display:none}}
