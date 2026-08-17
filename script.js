@@ -236,7 +236,7 @@ document.querySelectorAll('[data-year]').forEach(function(el) {
 (function() {
   // Setup Dynamic WhatsApp Message based on UTM
   var campaign = (sessionStorage.getItem('utm_campaign') || '').toLowerCase();
-  var defaultMsgLimpeza = "Olá! Vim pelo anúncio e gostaria de solicitar uma proposta de limpeza comercial.";
+  var defaultMsgLimpeza = "Olá! Vim pelo anúncio e gostaria de entender como funciona a terceirização de limpeza para minha empresa.";
   var defaultMsgCop = "Olá! Vim pelo anúncio e gostaria de solicitar uma proposta de copeiragem corporativa.";
   
   var dynamicMsg = defaultMsgLimpeza;
@@ -295,4 +295,22 @@ document.querySelectorAll('[data-year]').forEach(function(el) {
       a.classList.toggle('active', a.getAttribute('href') === '#' + current);
     });
   }, { passive: true });
+})();
+
+/* =============================================
+   FAQ ACCORDION
+   ============================================= */
+(function() {
+  document.querySelectorAll('.faq-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      var content = this.nextElementSibling;
+      if (!expanded) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+  });
 })();
