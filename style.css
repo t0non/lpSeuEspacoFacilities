@@ -590,13 +590,15 @@ h1.lp-h1{
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 
 /* --- FAQ ACCORDION --- */
+.faq-list { max-width: 800px; margin: 0 auto; background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; overflow: hidden; box-shadow: var(--sh-sm); }
 .faq-item { border-bottom: 1px solid var(--gray-100); }
-.faq-btn { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0; text-align: left; font-weight: 700; font-size: 17px; color: var(--navy); transition: color var(--tf); }
-.faq-btn:hover { color: var(--accent); }
+.faq-item:last-child { border-bottom: none; }
+.faq-btn { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 24px 32px; text-align: left; font-weight: 700; font-size: 17px; color: var(--navy); transition: all var(--tf); }
+.faq-btn:hover { background: var(--gray-50); color: var(--accent); }
 .faq-icon { transition: transform 0.3s ease; }
 .faq-btn[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
 .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-.faq-text { padding-bottom: 20px; color: var(--gray-500); }
+.faq-text { padding: 0 32px 24px 32px; color: var(--gray-500); }
 
 /* --- MOBILE CTA BAR --- */
 .mobile-cta-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); padding: 12px 16px; border-top: 1px solid var(--gray-100); z-index: 999; box-shadow: 0 -4px 16px rgba(0,0,0,0.06); }
@@ -654,6 +656,8 @@ h1.lp-h1{
   .lp-hero-cta .btn{width:100%;justify-content:center}
   .ident-block{padding:24px 22px}
   .btn-xl{font-size:15px;padding:15px 26px}
+  .faq-btn{padding:20px 20px;font-size:16px}
+  .faq-text{padding:0 20px 20px 20px}
   .mobile-cta-bar{display:block}
 }
 
