@@ -87,20 +87,20 @@
 
     <!-- HERO -->
     <section class="home-hero" id="inicio" aria-label="Apresentação">
-      <div class="container home-hero-inner">
-        <div class="fade-up">
-          <div class="hero-badge">
+      <div class="container home-hero-inner" style="grid-template-columns: 1fr; justify-items: center; text-align: center;">
+        <div class="fade-up" style="display: flex; flex-direction: column; align-items: center; max-width: 800px; margin: 0 auto;">
+          <div class="hero-badge" style="margin-bottom: 24px;">
             <span class="badge-dot" aria-hidden="true"></span>
             Atendimento empresarial · São Paulo
           </div>
-          <h1 class="display" style="font-size:42px; line-height:1.2; font-weight:800; margin-bottom:16px;">Facilities para empresas em São Paulo</h1>
-          <p class="subtitle" style="font-size:24px; font-weight:600; color:var(--accent); margin-bottom:8px;">Você cuida do seu negócio. Nós cuidamos da operação.</p>
-          <p class="subtitle" style="font-size:18px;">Soluções terceirizadas de limpeza comercial, conservação e copeiragem para a rotina do seu escritório.</p>
-          <div class="hero-cta-row">
+          <h1 class="display" style="font-size:clamp(38px, 5vw, 56px); line-height:1.15; font-weight:800; margin-bottom:16px;">Facilities para empresas em São Paulo</h1>
+          <p class="subtitle" style="font-size: clamp(20px, 3vw, 24px); font-weight:600; color:var(--accent); margin-bottom:16px;">Você cuida do seu negócio. Nós cuidamos da operação.</p>
+          <p class="subtitle" style="font-size: clamp(16px, 2vw, 18px); margin-bottom: 32px; max-width: 600px;">Soluções terceirizadas de limpeza comercial, conservação e copeiragem para a rotina do seu escritório.</p>
+          <div class="hero-cta-row" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
             <a href="limpeza-comercial.html#formulario" class="btn btn-primary btn-lg" id="cta-hero-orcamento" data-track="orcamento" data-loc="hero">Solicitar orçamento</a>
             <a href="#servicos" class="btn btn-ghost btn-lg" id="cta-hero-servicos">Conhecer nossos serviços</a>
           </div>
-          <div class="hero-note">
+          <div class="hero-note" style="justify-content: center; margin-top: 0; gap: 24px;">
             <span class="hero-note-item">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               Atendimento empresarial
