@@ -612,8 +612,8 @@ h1.lp-h1{
 /* --- RESPONSIVE MOBILE --- */
 @media(max-width:768px){
   :root{--section-v:var(--section-v-m);--px:var(--px-m)}
-  .nav,.header-cta{display:none}
-  .lp-header-inner .btn{display:none}
+  .nav,.header-cta{display:none !important}
+  .lp-header-inner .btn{display:none !important}
   .header-inner, .lp-header-inner { position: relative; justify-content: center; }
   .header-inner .logo, .lp-header-inner .logo { position: absolute; left: 50%; transform: translateX(-50%); }
   .hamburger{display:flex}
