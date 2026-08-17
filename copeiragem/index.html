@@ -89,360 +89,371 @@
   </header>
 
   <main>
-
     <!-- HERO LP -->
-    <section class="lp-hero" aria-label="Apresentação — Copeiragem Corporativa">
-      <div class="lp-hero-bg" aria-hidden="true">
-        <img src="/images/copeiragem-corporativa-sao-paulo.jpg" alt="Copeira corporativa servindo café em sala de reunião de escritório em São Paulo" width="1440" height="810" loading="eager" />
+    <section class="lp-hero" aria-label="Apresentação — Copeiragem Corporativa" style="padding-top: 40px;">
+      <div class="lp-hero-bg" aria-hidden="true" style="opacity: 0.15; z-index: 0;">
+        <img src="/images/copeiragem-corporativa-sao-paulo.jpg" alt="Copeiragem corporativa" width="1440" height="810" loading="eager" style="filter: grayscale(80%);" />
       </div>
-      <div class="container">
-        <div class="lp-hero-inner fade-up">
-          <nav aria-label="Breadcrumb" style="margin-bottom:16px;">
-            <ol style="list-style:none; padding:0; display:flex; gap:8px; font-size:14px; font-weight:500; color:rgba(255,255,255,0.8);">
-              <li><a href="/" style="color:inherit; text-decoration:none;">Home</a></li>
-              <li>&gt;</li>
-              <li>Serviços</li>
-              <li>&gt;</li>
-              <li aria-current="page" style="color:var(--white);">Copeiragem Corporativa</li>
-            </ol>
-          </nav>
-          <h1 class="lp-h1" style="font-size:42px; margin-bottom:12px;">Sua empresa também é lembrada pela forma como recebe.</h1>
-          <p class="lp-hero-sub" style="font-size:22px; font-weight:600; color:var(--accent-light); margin-bottom:8px;">Copeiragem corporativa para empresas que valorizam atendimento, organização e profissionalismo.</p>
-          <p class="lp-hero-sub" style="font-size:16px;">Profissionais para a rotina da copa, atendimento a reuniões e suporte à diretoria em São Paulo.</p>
-          <div class="lp-hero-cta">
-            <a href="#formulario" class="btn btn-white btn-xl" id="cta-cop-hero" data-track="orcamento" data-loc="lp_cop_hero">Solicitar avaliação</a>
-            <a href="https://wa.me/5511988259447?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+solicitar+um+or%C3%A7amento+de+copeiragem." class="btn btn-ghost-light btn-xl" target="_blank" rel="noopener noreferrer" id="cta-cop-hero-wa" data-track="whatsapp" data-loc="lp_cop_hero">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <div class="container" style="position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+        <div class="lp-hero-inner fade-up" style="flex: 1; min-width: 300px;">
+          <h1 class="lp-h1" style="font-size: clamp(32px, 5vw, 48px); margin-bottom: 16px; color: var(--navy); line-height: 1.1;">Sua empresa também é lembrada pela forma como recebe.</h1>
+          <p class="lp-hero-sub" style="font-size: clamp(18px, 2.5vw, 22px); font-weight: 600; color: var(--gray-600); margin-bottom: 24px;">Copeiragem corporativa para empresas que valorizam atendimento, organização e uma experiência mais profissional.</p>
+          <div class="lp-hero-cta" style="margin-bottom: 16px;">
+            <a href="#formulario" class="btn btn-primary btn-xl" id="cta-hero-proposta-cop" data-track="orcamento" data-loc="lp_hero">Quero uma proposta de copeiragem</a>
+            <a href="https://wa.me/5511988259447" class="btn btn-ghost btn-xl" target="_blank" rel="noopener noreferrer" id="cta-hero-wa-cop" data-track="whatsapp" data-loc="lp_hero">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Falar pelo WhatsApp
             </a>
           </div>
-          <div class="lp-hero-trust">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Para diretorias, escritórios e consultórios em São Paulo
-          </div>
+          <span style="font-size: 14px; color: var(--gray-500); font-weight: 500;">Atendimento empresarial em São Paulo</span>
+        </div>
+        <div class="fade-up" style="flex: 1; min-width: 300px; text-align: center;">
+          <img src="/images/copeiragem-corporativa-sao-paulo.jpg" alt="Profissional de copeiragem em escritório corporativo organizando café" style="border-radius: 12px; box-shadow: var(--sh-lg); width: 100%; max-width: 500px; margin: 0 auto; display: block;" loading="lazy" />
         </div>
       </div>
     </section>
 
-    <!-- TRUST BAR -->
-    <div class="trust-bar" aria-label="Garantias">
-      <div class="trust-bar-inner">
-        <div class="trust-i">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          Profissionais qualificados
-        </div>
-        <div class="trust-sep" aria-hidden="true"></div>
-        <div class="trust-i">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          Atendimento a reuniões
-        </div>
-        <div class="trust-sep" aria-hidden="true"></div>
-        <div class="trust-i">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          Postura corporativa
-        </div>
-        <div class="trust-sep" aria-hidden="true"></div>
-        <div class="trust-i">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          Suporte à diretoria
-        </div>
-      </div>
+    <!-- BARRA LOCAL -->
+    <div style="background: var(--navy); color: var(--white); text-align: center; padding: 12px 20px; font-weight: 600; font-size: 15px;">
+      📍 Atendimento empresarial em São Paulo
     </div>
 
-    <!-- SEO LOCAL -->
-    <section class="section-pad bg-white" aria-labelledby="seo-local-title">
+    <!-- SEGUNDA SEÇÃO: NÃO É APENAS CAFÉ -->
+    <section class="section-pad bg-off" aria-labelledby="cop-title-2">
       <div class="container">
         <div class="section-head fade-up">
-          <h2 class="title" id="seo-local-title">Copeiragem corporativa em São Paulo</h2>
-          <p class="subtitle" style="max-width:800px; margin: 0 auto; text-align:center;">Empresas, escritórios e outros ambientes corporativos em São Paulo podem contar com serviços de copeiragem terceirizada para apoiar a rotina da copa, reuniões e atendimento a clientes e visitantes.</p>
+          <h2 class="title" id="cop-title-2">Não é apenas servir café.</h2>
         </div>
-        <div class="fade-up" style="max-width:800px; margin: 40px auto 0; text-align:left;">
-          <h3 style="font-size:20px; font-weight:700; color:var(--navy); margin-bottom:12px;">Copeiragem para escritórios</h3>
-          <p style="color:var(--gray-600); margin-bottom:24px;">Atendimento dedicado para garantir que as estações de café e água estejam sempre abastecidas e organizadas ao longo do dia.</p>
-          
-          <h3 style="font-size:20px; font-weight:700; color:var(--navy); margin-bottom:12px;">Copeiragem para empresas</h3>
-          <p style="color:var(--gray-600); margin-bottom:24px;">Suporte operacional durante reuniões de diretoria e atendimento a visitantes com alto padrão de qualidade.</p>
-          
-          <h3 style="font-size:20px; font-weight:700; color:var(--navy); margin-bottom:12px;">Copeiragem para clínicas</h3>
-          <p style="color:var(--gray-600);">Cuidado especial para as áreas de espera e atendimento aos pacientes, mantendo um ambiente acolhedor e profissional.</p>
+        <div class="fade-up" style="max-width:800px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+          <div style="background: var(--white); padding: 24px 32px; border-radius: 8px; box-shadow: var(--sh-xs); font-weight: 600; color: var(--navy); font-size: 18px;">É preparar uma reunião.</div>
+          <div style="background: var(--white); padding: 24px 32px; border-radius: 8px; box-shadow: var(--sh-xs); font-weight: 600; color: var(--navy); font-size: 18px;">É receber um cliente.</div>
+          <div style="background: var(--white); padding: 24px 32px; border-radius: 8px; box-shadow: var(--sh-xs); font-weight: 600; color: var(--navy); font-size: 18px;">É manter a copa organizada.</div>
+          <div style="background: var(--white); padding: 24px 32px; border-radius: 8px; box-shadow: var(--sh-xs); font-weight: 600; color: var(--navy); font-size: 18px;">É apoiar a rotina da empresa.</div>
+          <div style="background: var(--white); padding: 24px 32px; border-radius: 8px; box-shadow: var(--sh-xs); font-weight: 600; color: var(--navy); font-size: 18px;">É cuidar dos pequenos detalhes que fazem parte da experiência.</div>
         </div>
       </div>
     </section>
 
-    <!-- IDENTIFICAÇÃO DA DOR -->
-    <section class="section-pad bg-off" aria-labelledby="dor-cop-title">
-      <div class="container">
-        <div class="section-head fade-up">
-          <h2 class="title" id="dor-cop-title">Tire essa responsabilidade da sua equipe.</h2>
-          <p class="subtitle" style="max-width:800px; margin: 0 auto; text-align:center;">Quando os funcionários do seu escritório precisam dividir o tempo entre suas funções originais e tarefas de organização da copa ou preparo de café para reuniões, alguém sempre perde o foco. Terceirize a rotina da copa com profissionais dedicados, com a postura e discrição que o seu ambiente corporativo exige.</p>
-        </div>
-        <div class="fade-up" style="margin-top:32px; text-align:center;">
-          <a href="#formulario" class="btn btn-primary" data-track="orcamento" data-loc="dor_cop">Solicitar avaliação</a>
-        </div>
+    <!-- DOR: SUA EQUIPE PRECISA CUIDAR DA COPA? -->
+    <section class="section-pad bg-white" aria-labelledby="dor-title">
+      <div class="container fade-up" style="max-width: 800px; text-align: center;">
+        <h2 class="title" id="dor-title">Sua equipe precisa cuidar da copa?</h2>
+        <p class="subtitle subtitle--center" style="margin-bottom: 32px; font-size: 18px;">Quando funcionários precisam dividir o tempo entre suas funções e tarefas de copa, alguém acaba perdendo foco.</p>
+        <p style="font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 32px;">Essa rotina pode ser terceirizada.</p>
+        <a href="#mecanismo" class="btn btn-primary btn-xl">Conhecer a solução</a>
       </div>
     </section>
 
     <!-- SOLUÇÃO -->
-    <section class="section-pad bg-white" aria-labelledby="solucao-cop-title">
+    <section class="section-pad bg-navy" style="background: var(--navy); color: var(--white); text-align: center;">
+      <div class="container fade-up" style="max-width: 800px;">
+        <h2 class="title" style="color: var(--white);">Deixe essa rotina com quem foi contratado para cuidar dela.</h2>
+        <p class="subtitle subtitle--center" style="color: rgba(255,255,255,0.8); margin: 0 auto;">A terceirização da copeiragem permite que sua empresa conte com profissionais dedicados à rotina da copa e ao apoio aos momentos que exigem atendimento.</p>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="section-pad bg-off" aria-labelledby="beneficios-title">
+      <div class="container">
+        <div class="section-head fade-up" style="display: none;">
+          <h2 class="title" id="beneficios-title">Benefícios da Terceirização</h2>
+        </div>
+        <div class="cards-4">
+          <div class="card fade-up" style="text-align: center;">
+            <h3 class="card-title">REUNIÕES MAIS ORGANIZADAS</h3>
+            <p class="card-text">Apoio à preparação e organização da copa.</p>
+          </div>
+          <div class="card fade-up" style="text-align: center;">
+            <h3 class="card-title">RECEPÇÃO PROFISSIONAL</h3>
+            <p class="card-text">Atendimento adequado a clientes e visitantes.</p>
+          </div>
+          <div class="card fade-up" style="text-align: center;">
+            <h3 class="card-title">MAIS FOCO PARA A EQUIPE</h3>
+            <p class="card-text">Funcionários podem permanecer concentrados em suas funções.</p>
+          </div>
+          <div class="card fade-up" style="text-align: center;">
+            <h3 class="card-title">ROTINA MAIS PRÁTICA</h3>
+            <p class="card-text">Uma pessoa dedicada à rotina de copa e apoio.</p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 48px;" class="fade-up">
+          <a href="#formulario" class="btn btn-primary btn-lg">Solicitar proposta</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section-pad bg-white" id="servicos" aria-labelledby="servicos-title">
       <div class="container">
         <div class="section-head fade-up">
-          <span class="label">A solução</span>
-          <h2 class="title" id="solucao-cop-title">Terceirize a copeiragem com foco corporativo.</h2>
-          <p class="subtitle subtitle--center">Coloque a responsabilidade do atendimento em mãos experientes, com profissionais selecionados para o ambiente corporativo.</p>
+          <h2 class="title" id="servicos-title">Como a copeiragem pode apoiar sua empresa?</h2>
         </div>
         <div class="cards-4">
           <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="11" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-            </div>
-            <h3 class="card-title">Perfil Corporativo</h3>
-            <p class="card-text">Profissionais com postura adequada para escritórios, clínicas e diretorias.</p>
+            <h3 class="card-title">SERVIÇO DE COPA</h3>
+            <p class="card-text">Organização e rotina da copa empresarial.</p>
           </div>
           <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 class="card-title">Organização da Copa</h3>
-            <p class="card-text">Gestão completa do ambiente, mantendo o local limpo e abastecido ao longo do dia.</p>
+            <h3 class="card-title">CAFÉ E REUNIÕES</h3>
+            <p class="card-text">Preparação e apoio durante reuniões e encontros corporativos.</p>
           </div>
           <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
-            <h3 class="card-title">Atendimento a Reuniões</h3>
-            <p class="card-text">Serviço de copa para salas de reunião de forma discreta e eficiente.</p>
+            <h3 class="card-title">ATENDIMENTO</h3>
+            <p class="card-text">Apoio na recepção de clientes e visitantes.</p>
           </div>
           <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <h3 class="card-title">Continuidade</h3>
-            <p class="card-text">Cobertura para faltas e férias, garantindo que o serviço nunca seja interrompido.</p>
+            <h3 class="card-title">ORGANIZAÇÃO</h3>
+            <p class="card-text">Manutenção da organização da área de copa durante a rotina.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVIÇOS ESPECÍFICOS -->
-    <section class="section-pad bg-off" id="servicos" aria-labelledby="escopo-cop-title">
+    <!-- SEGMENTOS -->
+    <section class="section-pad bg-off" id="segmentos" aria-labelledby="seg-title">
       <div class="container">
         <div class="section-head fade-up">
-          <span class="label">O Escopo</span>
-          <h2 class="title" id="escopo-cop-title">Como a copeiragem apoia o seu negócio.</h2>
-        </div>
-        <div class="cards-3">
-          <div class="card card--featured fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
-            </div>
-            <h3 class="card-title">Copeira de Diretoria</h3>
-            <p class="card-text">Atendimento dedicado para o corpo diretivo, com foco em discrição, etiqueta e agilidade.</p>
-          </div>
-          <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            </div>
-            <h3 class="card-title">Copeira de Eventos e Reuniões</h3>
-            <p class="card-text">Preparação do ambiente, organização do coffee break e atendimento durante compromissos importantes.</p>
-          </div>
-          <div class="card fade-up">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21v-4a4 4 0 014-4h10a4 4 0 014 4v4"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <h3 class="card-title">Copeira de Rotina Corporativa</h3>
-            <p class="card-text">Gestão das copas dos andares, reposição de insumos, café e organização do dia a dia do escritório.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PARA QUEM -->
-    <section class="section-pad bg-white" id="para-quem" aria-labelledby="publico-cop-title">
-      <div class="container">
-        <div class="section-head fade-up">
-          <span class="label">Onde atuamos</span>
-          <h2 class="title" id="publico-cop-title">Perfis que exigem excelência no atendimento.</h2>
+          <h2 class="title" id="seg-title">Pensado para ambientes onde a experiência importa.</h2>
         </div>
         <div class="seg-grid">
           <div class="seg-card fade-up">
             <div class="seg-img-wrap">
-              <img src="/images/corporate.jpg" alt="Serviços de copeiragem para escritórios e sedes corporativas em São Paulo" loading="lazy" width="400" height="300" />
-              <div class="seg-img-overlay" aria-hidden="true"></div>
+              <img src="/images/office.jpg" alt="Escritórios" loading="lazy" width="400" height="300" />
             </div>
             <div class="seg-body">
-              <h3 class="seg-title">Sedes Corporativas</h3>
-              <p class="seg-text">Profissionais para gerenciar múltiplas copas em escritórios maiores.</p>
+              <h3 class="seg-title">ESCRITÓRIOS</h3>
+              <p class="seg-text">Para reuniões, clientes e rotina da equipe.</p>
             </div>
           </div>
           <div class="seg-card fade-up">
             <div class="seg-img-wrap">
-              <img src="/images/office.jpg" alt="Copeiragem corporativa para salas de diretoria em São Paulo" loading="lazy" width="400" height="300" />
-              <div class="seg-img-overlay" aria-hidden="true"></div>
+              <img src="/images/corporate.jpg" alt="Empresas" loading="lazy" width="400" height="300" />
             </div>
             <div class="seg-body">
-              <h3 class="seg-title">Salas de Diretoria</h3>
-              <p class="seg-text">Atendimento diferenciado e exclusivo para a alta gestão da empresa.</p>
+              <h3 class="seg-title">EMPRESAS</h3>
+              <p class="seg-text">Para estruturas corporativas que precisam de apoio operacional.</p>
             </div>
           </div>
           <div class="seg-card fade-up">
             <div class="seg-img-wrap">
-              <img src="/images/clinic.jpg" alt="Copeiragem para clínicas e consultórios em São Paulo" loading="lazy" width="400" height="300" />
-              <div class="seg-img-overlay" aria-hidden="true"></div>
+              <img src="/images/clinic.jpg" alt="Clínicas e Consultórios" loading="lazy" width="400" height="300" />
             </div>
             <div class="seg-body">
-              <h3 class="seg-title">Clínicas Premium</h3>
-              <p class="seg-text">Para encantar pacientes no momento da recepção e da espera.</p>
+              <h3 class="seg-title">CLÍNICAS</h3>
+              <p class="seg-text">Para ambientes profissionais que valorizam organização e atendimento.</p>
             </div>
           </div>
           <div class="seg-card fade-up">
             <div class="seg-img-wrap">
-              <img src="/images/condominium.jpg" alt="Copeiragem corporativa para coworkings em São Paulo" loading="lazy" width="400" height="300" />
-              <div class="seg-img-overlay" aria-hidden="true"></div>
+              <img src="/images/condominium.jpg" alt="Ambientes Corporativos" loading="lazy" width="400" height="300" />
             </div>
             <div class="seg-body">
-              <h3 class="seg-title">Coworkings e Hubs</h3>
-              <p class="seg-text">Gestão das copas comunitárias e suporte logístico ao ambiente.</p>
+              <h3 class="seg-title">AMBIENTES CORPORATIVOS</h3>
+              <p class="seg-text">Para momentos em que cada detalhe importa.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA DARK -->
-    <section class="dark-cta" aria-labelledby="dark-cop-title">
-      <div class="dark-cta-inner fade-up">
-        <span class="label label--light">Profissionais selecionados</span>
-        <h2 class="title title--light" id="dark-cop-title">Sua empresa precisa de um serviço de copeiragem corporativa?</h2>
-        <p class="subtitle subtitle--light subtitle--center">Terceirize o processo e garanta padrão e continuidade. Solicite uma proposta e entenderemos o perfil necessário para o seu negócio.</p>
-        <div class="dark-cta-btns">
-          <a href="#formulario" class="btn btn-white btn-xl" id="cta-dark-cop-orcamento" data-track="orcamento" data-loc="cop_dark_cta">Solicitar orçamento</a>
-          <a href="https://wa.me/5511988259447?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+solicitar+um+or%C3%A7amento+de+copeiragem." class="btn btn-ghost-light btn-xl" target="_blank" rel="noopener noreferrer" id="cta-dark-cop-wa" data-track="whatsapp" data-loc="cop_dark_cta">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Falar com um especialista
-          </a>
+    <!-- MECANISMO -->
+    <section id="mecanismo" class="section-pad bg-white" aria-labelledby="mec-title">
+      <div class="container">
+        <div class="section-head fade-up">
+          <h2 class="title" id="mec-title">Você cuida da reunião. Nós cuidamos dos detalhes.</h2>
+        </div>
+        <div class="mech-wrap fade-up" style="display: flex; justify-content: center; gap: 16px; align-items: center; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
+          <div style="background: var(--off-white); border: 1px solid var(--gray-200); padding: 24px; border-radius: 12px; font-weight: 800; color: var(--navy); text-align: center; flex: 1; min-width: 200px;">
+            PREPARAÇÃO
+          </div>
+          <div class="mech-arrow" style="color: var(--accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div style="background: var(--off-white); border: 1px solid var(--gray-200); padding: 24px; border-radius: 12px; font-weight: 800; color: var(--navy); text-align: center; flex: 1; min-width: 200px;">
+            ATENDIMENTO
+          </div>
+          <div class="mech-arrow" style="color: var(--accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div style="background: var(--off-white); border: 1px solid var(--gray-200); padding: 24px; border-radius: 12px; font-weight: 800; color: var(--navy); text-align: center; flex: 1; min-width: 200px;">
+            ORGANIZAÇÃO
+          </div>
+          <div class="mech-arrow" style="color: var(--accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div style="background: var(--accent); border: 1px solid var(--accent); padding: 24px; border-radius: 12px; font-weight: 800; color: var(--white); text-align: center; flex: 1; min-width: 200px; box-shadow: 0 8px 24px rgba(9, 85, 136, 0.2);">
+            EXPERIÊNCIA
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FORMULÁRIO -->
-    <section class="section-pad form-section" id="formulario" aria-labelledby="form-cop-title">
-      <div class="container form-grid">
-        <div class="fade-left">
-          <span class="label">Formulário de contato</span>
-          <h2 class="form-info-title" id="form-cop-title">Solicite uma proposta de copeiragem corporativa</h2>
-          <p class="form-info-text">Preencha o formulário e nossa equipe entrará em contato para entender o perfil da sua empresa e enviar uma proposta adequada.</p>
-          <ul class="contact-list">
-            <li class="contact-item">
-              <div class="contact-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </div>
-              <div>
-                <strong>WhatsApp</strong>
-                <a href="https://wa.me/5511988259447" target="_blank" rel="noopener noreferrer" data-track="phone" data-loc="cop_form_info">+55 (11) 98825-9447</a>
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="contact-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div>
-                <strong>E-mail</strong>
-                <a href="mailto:contato@[DOMINIO].com.br" data-track="phone" data-loc="cop_form_info">contato@[DOMINIO].com.br</a>
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="contact-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <strong>Localização</strong>
-                <span>São Paulo — SP</span>
-              </div>
-            </li>
-          </ul>
+    <!-- COMO FUNCIONA / PROCESSO -->
+    <section class="section-pad bg-off" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head fade-up" style="display: none;">
+          <h2 class="title" id="process-title">Como Funciona</h2>
         </div>
-        <div class="form-card fade-right">
-          <form action="/obrigado" method="GET" class="contact-form form-body" id="form-copeiragem" novalidate>
-            <input type="hidden" name="origem" value="Landing Page Copeiragem" />
-            <div class="form-group">
-              <label class="form-label" for="cop-nome">Nome completo <span aria-hidden="true">*</span></label>
-              <input type="text" id="cop-nome" name="nome" class="form-input" required />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="cop-whats">WhatsApp <span aria-hidden="true">*</span></label>
-                <input type="tel" id="cop-whats" name="whatsapp" class="form-input" data-mask="phone" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="cop-empresa">Nome da Empresa <span aria-hidden="true">*</span></label>
-                <input type="text" id="cop-empresa" name="empresa" class="form-input" required />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="cop-tipo">Tipo de empresa</label>
-                <div class="sel-wrap">
-                  <select id="cop-tipo" name="tipo_empresa" class="form-select">
-                    <option value="Escritório">Escritório</option>
-                    <option value="Clínica">Clínica</option>
-                    <option value="Consultório">Consultório</option>
-                    <option value="Coworking">Coworking</option>
-                    <option value="Empresa">Outra Empresa</option>
-                  </select>
-                  <svg class="sel-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="cop-servico">Serviço</label>
-                <div class="sel-wrap">
-                  <select id="cop-servico" name="servico" class="form-select">
-                    <option value="Copeiragem">Copeiragem Corporativa</option>
-                    <option value="Limpeza Comercial">Limpeza Comercial</option>
-                    <option value="Facilities">Facilities</option>
-                  </select>
-                  <svg class="sel-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="cop-regiao">Região / Bairro</label>
-              <input type="text" id="cop-regiao" name="regiao" class="form-input" placeholder="Ex: Av. Paulista, Pinheiros..." />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="cop-email">E-mail (Opcional)</label>
-              <input type="email" id="cop-email" name="email" class="form-input" />
-            </div>
+        <div class="how-grid">
+          <div class="how-step fade-up">
+            <div class="how-num">01</div>
             <div>
-              <button type="submit" class="btn btn-primary btn-lg btn-full" id="cta-form-cop-submit" data-track="orcamento" data-loc="cop_form_submit">
-                Solicitar avaliação
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <h3 class="card-title">Entendemos sua rotina</h3>
+              <p class="card-text">Análise do fluxo.</p>
+            </div>
+          </div>
+          <div class="how-step fade-up">
+            <div class="how-num">02</div>
+            <div>
+              <h3 class="card-title">Definimos a necessidade</h3>
+              <p class="card-text">Escopo do serviço.</p>
+            </div>
+          </div>
+          <div class="how-step fade-up">
+            <div class="how-num">03</div>
+            <div>
+              <h3 class="card-title">Estruturamos a solução</h3>
+              <p class="card-text">Alocação correta.</p>
+            </div>
+          </div>
+          <div class="how-step fade-up">
+            <div class="how-num">04</div>
+            <div>
+              <h3 class="card-title">Iniciamos a operação</h3>
+              <p class="card-text">Apoio garantido.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONVERSÃO PRINCIPAL -->
+    <section id="formulario" class="section-pad" style="background: var(--navy); color: var(--white);">
+      <div class="container" style="max-width: 800px; margin: 0 auto;">
+        <div class="section-head fade-up" style="margin-bottom: 40px;">
+          <h2 class="title" style="color: var(--white);">Sua empresa está pronta para receber melhor?</h2>
+          <p class="subtitle subtitle--center" style="color: rgba(255,255,255,0.8);">Conte como funciona sua rotina e converse com nossa equipe para entender a melhor solução de copeiragem.</p>
+        </div>
+        <div class="form-card fade-up" style="background: var(--white); border-radius: 16px; padding: 40px; color: var(--gray-600);">
+          <form action="/obrigado" method="GET" class="contact-form" id="form-cop" novalidate>
+            <input type="hidden" name="origem" value="Landing Page Copeiragem" />
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label class="form-label" for="lp-nome">Nome</label>
+              <input type="text" id="lp-nome" name="nome" class="form-input" required />
+            </div>
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label class="form-label" for="lp-whats">WhatsApp</label>
+              <input type="tel" id="lp-whats" name="whatsapp" class="form-input" data-mask="phone" required />
+            </div>
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label class="form-label" for="lp-empresa">Empresa</label>
+              <input type="text" id="lp-empresa" name="empresa" class="form-input" required />
+            </div>
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label class="form-label" for="lp-tipo">Tipo de empresa</label>
+              <div class="sel-wrap">
+                <select id="lp-tipo" name="tipo_empresa" class="form-select">
+                  <option value="Escritório">Escritório</option>
+                  <option value="Empresa">Empresa</option>
+                  <option value="Clínica">Clínica</option>
+                  <option value="Outro">Outro</option>
+                </select>
+                <svg class="sel-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label class="form-label" for="lp-regiao">Região</label>
+              <input type="text" id="lp-regiao" name="regiao" class="form-input" required />
+            </div>
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label class="form-label" for="lp-necessidade">Necessidade</label>
+              <input type="text" id="lp-necessidade" name="necessidade" class="form-input" placeholder="Ex: reuniões diárias, clientes frequentes..." required />
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <button type="submit" class="btn btn-primary btn-lg btn-full" id="cta-form-cop-submit" data-track="orcamento" data-loc="lp_cop_form_submit">
+                Solicitar proposta
               </button>
+              <a href="https://wa.me/5511988259447" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg btn-full" id="cta-form-wa-cop" data-track="whatsapp" data-loc="lp_cop_form">
+                Falar pelo WhatsApp
+              </a>
             </div>
           </form>
           <div class="form-success" id="form-cop-success" hidden role="alert" aria-live="polite">
             <div class="form-success-icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <h3>Solicitação recebida!</h3>
-            <p>Recebemos sua solicitação de copeiragem. Em breve nossa equipe entrará em contato para entender o perfil desejado e apresentar uma proposta.</p>
+            <h3 style="color: var(--navy);">Solicitação recebida!</h3>
+            <p>Em breve nossa equipe entrará em contato para entender sua rotina e apresentar uma proposta de copeiragem.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="final-cta" aria-labelledby="final-cop-title">
-      <div class="final-cta-inner fade-up">
-        <h2 class="final-cta-title" id="final-cop-title">Profissionalismo desde o café da manhã.</h2>
-        <p class="final-cta-text">Garanta que o atendimento na sua empresa passe a credibilidade que a sua marca merece.</p>
-        <div class="final-cta-btns">
-          <a href="#formulario" class="btn btn-primary btn-xl" id="cta-final-cop-orcamento" data-track="orcamento" data-loc="cop_final_cta">Solicitar orçamento</a>
+    <!-- FAQ -->
+    <section class="section-pad bg-off" aria-labelledby="faq-title">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-head fade-up">
+          <h2 class="title" id="faq-title">Perguntas Frequentes</h2>
+        </div>
+        <div class="faq-list fade-up">
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false" aria-controls="faq1">
+              O que faz uma copeira corporativa?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div id="faq1" class="faq-content">
+              <p class="faq-text">Apoia a rotina de reuniões, recepção de clientes e conservação da organização da área de copa dentro do escritório.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false" aria-controls="faq2">
+              Para quais empresas o serviço é indicado?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div id="faq2" class="faq-content">
+              <p class="faq-text">Escritórios, clínicas e empresas de diversos setores que precisam de profissionalismo no atendimento e apoio diário sem deslocar sua própria equipe.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false" aria-controls="faq3">
+              Como funciona a contratação?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div id="faq3" class="faq-content">
+              <p class="faq-text">Através da terceirização, onde assumimos toda a responsabilidade trabalhista, substituições e acompanhamento operacional.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false" aria-controls="faq4">
+              Como funciona o orçamento?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div id="faq4" class="faq-content">
+              <p class="faq-text">Avaliamos a sua necessidade de horários e a complexidade da rotina para estruturar uma proposta assertiva e transparente.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false" aria-controls="faq5">
+              A copeiragem pode atender reuniões?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div id="faq5" class="faq-content">
+              <p class="faq-text">Sim, essa é uma das principais vantagens. Os profissionais preparam o ambiente, o café e oferecem o apoio necessário durante encontros com clientes ou diretoria.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
-
+  
+  <!-- FLOATING CTA MOBILE -->
+  <div class="mobile-cta-bar">
+    <a href="https://wa.me/5511988259447" class="btn btn-wa btn-full" data-track="whatsapp" data-loc="floating_mobile_cop">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right: 8px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      💬 Solicitar proposta
+    </a>
+  </div>
   <!-- MINI FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-bar" style="border-top:none">
@@ -455,12 +466,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- WHATSAPP FLOAT -->
-  <a href="https://wa.me/5511XXXXXXXXX?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+solicitar+um+or%C3%A7amento+de+copeiragem." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento pelo WhatsApp" id="wa-float-cop" data-track="whatsapp" data-loc="float_cop">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    <span class="wa-float-label">Solicitar orçamento</span>
-  </a>
 
   <script src="/script.js"></script>
 </body>
