@@ -142,7 +142,7 @@ h3.card-title{
 
 /* --- HEADER (Full — Home) --- */
 .site-header{
-  position:sticky;top:0;z-index:900;
+  position:relative;z-index:900;
   background:rgba(255,255,255,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--gray-100);transition:box-shadow var(--t)
 }
@@ -187,7 +187,7 @@ h3.card-title{
 
 /* --- HEADER (Strip — Landing Pages) --- */
 .lp-header{
-  position:sticky;top:0;z-index:900;
+  position:relative;z-index:900;
   background:rgba(255,255,255,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--gray-100);transition:box-shadow var(--t)
 }
@@ -613,6 +613,9 @@ h1.lp-h1{
 @media(max-width:768px){
   :root{--section-v:var(--section-v-m);--px:var(--px-m)}
   .nav,.header-cta{display:none}
+  .lp-header-inner .btn{display:none}
+  .header-inner, .lp-header-inner { position: relative; justify-content: center; }
+  .header-inner .logo, .lp-header-inner .logo { position: absolute; left: 50%; transform: translateX(-50%); }
   .hamburger{display:flex}
   .home-hero{padding-block:52px}
   .hero-img{height:260px}
