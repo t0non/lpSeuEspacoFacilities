@@ -136,43 +136,77 @@ function trackEvent(eventName, params) {
 })();
 
 /* =============================================
-   5. FORM TRACKING (START & SUBMIT)
+   5. FORM → WHATSAPP
    ============================================= */
 (function() {
-  var forms = document.querySelectorAll('.contact-form');
+  var WA_NUMBER = '5511988259447';
   var isLimpeza = window.location.pathname.indexOf('limpeza') !== -1;
-  var isCop = window.location.pathname.indexOf('copeiragem') !== -1;
+  var isCop     = window.location.pathname.indexOf('copeiragem') !== -1;
+
+  var forms = document.querySelectorAll('.contact-form');
 
   forms.forEach(function(form) {
     var formStarted = false;
-    
+
     // Track form_start
     form.addEventListener('input', function() {
       if (!formStarted) {
         formStarted = true;
         trackEvent('form_start', { form_id: form.id });
       }
-    }, { once: true }); // Executa apenas uma vez
+    }, { once: true });
 
-    // Track Submit / Lead
+    // Submit → WhatsApp
     form.addEventListener('submit', function(e) {
-      if (!form.checkValidity()) return; // Não dispara se o HTML5 validation barrar
+      e.preventDefault();
 
-      // Evento de Lead Genérico
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Coleta os campos
+      var nome       = (form.querySelector('[name="nome"]')          || {}).value || '';
+      var whatsapp   = (form.querySelector('[name="whatsapp"]')      || {}).value || '';
+      var empresa    = (form.querySelector('[name="empresa"]')       || {}).value || '';
+      var tipo       = (form.querySelector('[name="tipo_empresa"]')  || {}).value || '';
+      var regiao     = (form.querySelector('[name="regiao"]')        || {}).value || '';
+      var servico    = (form.querySelector('[name="servico"]')       || {}).value || '';
+      var necessidade= (form.querySelector('[name="necessidade"]')   || {}).value || '';
+      var origem     = (form.querySelector('[name="origem"]')        || {}).value || 'Site';
+
+      // Monta a mensagem
+      var linhas = [];
+      linhas.push('Olá! Vim pelo site e gostaria de solicitar uma proposta. Seguem minhas informações:');
+      linhas.push('');
+      if (nome)        linhas.push('👤 Nome: ' + nome);
+      if (whatsapp)    linhas.push('📱 WhatsApp: ' + whatsapp);
+      if (empresa)     linhas.push('🏢 Empresa: ' + empresa);
+      if (tipo)        linhas.push('🏷️ Tipo: ' + tipo);
+      if (regiao)      linhas.push('📍 Região: ' + regiao);
+      if (servico)     linhas.push('🔧 Serviço: ' + servico);
+      if (necessidade) linhas.push('📝 Necessidade: ' + necessidade);
+      linhas.push('');
+      linhas.push('Origem: ' + origem);
+
+      var mensagem = linhas.join('\n');
+      var waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(mensagem);
+
+      // Tracking
       trackEvent('form_submit', { form_id: form.id });
       trackEvent('Lead', { form_id: form.id });
-      
-      // Evento de Lead Específico
       if (isLimpeza) {
         trackEvent('lead_limpeza', { form_id: form.id });
       } else if (isCop) {
         trackEvent('lead_copeiragem', { form_id: form.id });
       }
-      
-      // NOTA: O form.submit() continua o envio normal e redireciona para a página de Obrigado.
+
+      // Abre o WhatsApp
+      window.open(waUrl, '_blank');
     });
   });
 })();
+
 
 /* =============================================
    6. UI UTILS & MISC
