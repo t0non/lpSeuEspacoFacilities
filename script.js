@@ -1,219 +1,188 @@
 'use strict';
 
 /* =============================================
-   UTM CAPTURE E INITIAL VIEW
+   1. UTMS E DADOS DE ORIGEM (META ADS)
    ============================================= */
 (function() {
   var urlParams = new URLSearchParams(window.location.search);
-  var utms = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-  utms.forEach(function(utm) {
-    if (urlParams.has(utm)) {
-      sessionStorage.setItem(utm, urlParams.get(utm));
+  var trackingParams = [
+    'utm_source', 
+    'utm_medium', 
+    'utm_campaign', 
+    'utm_term', 
+    'utm_content', 
+    'fbclid'
+  ];
+  
+  // Salva no sessionStorage se estiver na URL
+  trackingParams.forEach(function(param) {
+    if (urlParams.has(param)) {
+      sessionStorage.setItem(param, urlParams.get(param));
     }
   });
-  // Track View
+
+  // Track Inicial da Página
   setTimeout(function() {
-    trackEvent('meta_lp_view');
-  }, 100);
+    var isLimpeza = window.location.pathname.indexOf('limpeza') !== -1;
+    var isCop = window.location.pathname.indexOf('copeiragem') !== -1;
+    
+    // Dispara PageView genérico
+    trackEvent('PageView');
+    
+    // Dispara ViewContent específico se for Landing Page
+    if (isLimpeza || isCop) {
+      trackEvent('ViewContent', { 
+        content_name: isLimpeza ? 'LP Limpeza Comercial' : 'LP Copeiragem Corporativa' 
+      });
+    }
+  }, 300);
 })();
 
 /* =============================================
-   TRACKING — Placeholders
+   2. META CONVERSIONS API (CAPI) - PLACEHOLDERS
+   ============================================= */
+/*
+  TODO: Quando a Conversions API for ativada no backend (Node/PHP/Python),
+  os seguintes tokens devem ser configurados no servidor (NUNCA expor no frontend):
+  
+  [META_ACCESS_TOKEN] -> Token de acesso gerado no Gerenciador de Eventos
+  [META_DATASET_ID]   -> ID do Pixel (Pixel ID)
+  
+  O frontend passará os dados (UTMs, fbp, fbc, user_data) via POST para o seu backend,
+  que então fará a requisição oficial para a Graph API do Facebook.
+*/
+
+/* =============================================
+   3. EVENT TRACKER ENGINE
    ============================================= */
 function trackEvent(eventName, params) {
   params = params || {};
   
-  // Inject stored UTMs into event params
-  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function(utm) {
-    var val = sessionStorage.getItem(utm);
-    if (val) params[utm] = val;
+  // Injeta UTMs e fbclid preservados nos parâmetros do evento
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'fbclid'].forEach(function(param) {
+    var val = sessionStorage.getItem(param);
+    if (val) params[param] = val;
   });
 
-  // Google Tag Manager / GA4
+  // Google Tag Manager / GA4 fallback
   if (typeof dataLayer !== 'undefined') {
     dataLayer.push(Object.assign({ event: eventName }, params));
   }
   if (typeof gtag === 'function') {
     gtag('event', eventName, params);
   }
-  // Meta Pixel
+
+  // Meta Pixel Base Tracking
   if (typeof fbq === 'function') {
-    if (eventName === 'meta_lp_view') fbq('track', 'PageView');
-    else if (eventName.indexOf('lead_') === 0 || eventName === 'meta_form_submit') fbq('track', 'Lead', params);
-    else fbq('trackCustom', eventName, params);
+    var standardEvents = ['PageView', 'Lead', 'ViewContent', 'Contact'];
+    if (standardEvents.indexOf(eventName) !== -1) {
+      fbq('track', eventName, params);
+    } else {
+      fbq('trackCustom', eventName, params);
+    }
+  }
+  
+  // Console log para ambiente local / debug
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    console.log('[Meta Ads Track] Evento:', eventName, params);
   }
 }
 
 /* =============================================
-   FOOTER YEAR
+   4. WHATSAPP TRACKING & DYNAMIC MESSAGE
    ============================================= */
+(function() {
+  // Pega as variáveis para montar a mensagem dinâmica
+  var campaign = sessionStorage.getItem('utm_campaign') || '';
+  var content = sessionStorage.getItem('utm_content') || '';
+  
+  var isLimpeza = window.location.pathname.indexOf('limpeza') !== -1;
+  var isCop = window.location.pathname.indexOf('copeiragem') !== -1;
+
+  var dynamicMsg = "Olá! Vim pelo site e gostaria de conversar com a equipe.";
+  
+  if (isLimpeza) {
+    dynamicMsg = "Olá! Vim pelo anúncio e gostaria de entender como funciona a terceirização de limpeza para minha empresa.";
+    if (campaign.toLowerCase().indexOf('clinica') !== -1 || content.toLowerCase().indexOf('clinica') !== -1) {
+      dynamicMsg = "Olá! Vim pelo anúncio e gostaria de saber sobre limpeza comercial para minha clínica.";
+    } else if (campaign.toLowerCase().indexOf('escritorio') !== -1) {
+      dynamicMsg = "Olá! Vim pelo anúncio e gostaria de saber sobre limpeza comercial para meu escritório.";
+    }
+  } else if (isCop) {
+    dynamicMsg = "Olá! Vim pelo anúncio e gostaria de solicitar uma proposta de copeiragem corporativa para minha empresa.";
+  }
+
+  // Aplicar a mensagem em todos os links do WhatsApp
+  document.querySelectorAll('[data-track="whatsapp"]').forEach(function(el) {
+    var href = el.getAttribute('href');
+    if (href && href.indexOf('wa.me') !== -1) {
+      var baseWa = href.split('?')[0];
+      el.setAttribute('href', baseWa + '?text=' + encodeURIComponent(dynamicMsg));
+    }
+
+    el.addEventListener('click', function() {
+      // Evento genérico
+      trackEvent('click_whatsapp', { location: el.getAttribute('data-loc') || 'unknown' });
+      trackEvent('Contact', { method: 'whatsapp' });
+      
+      // Evento específico por LP
+      if (isLimpeza) {
+        trackEvent('whatsapp_limpeza', { location: el.getAttribute('data-loc') || 'unknown' });
+      } else if (isCop) {
+        trackEvent('whatsapp_copeiragem', { location: el.getAttribute('data-loc') || 'unknown' });
+      }
+    });
+  });
+})();
+
+/* =============================================
+   5. FORM TRACKING (START & SUBMIT)
+   ============================================= */
+(function() {
+  var forms = document.querySelectorAll('.contact-form');
+  var isLimpeza = window.location.pathname.indexOf('limpeza') !== -1;
+  var isCop = window.location.pathname.indexOf('copeiragem') !== -1;
+
+  forms.forEach(function(form) {
+    var formStarted = false;
+    
+    // Track form_start
+    form.addEventListener('input', function() {
+      if (!formStarted) {
+        formStarted = true;
+        trackEvent('form_start', { form_id: form.id });
+      }
+    }, { once: true }); // Executa apenas uma vez
+
+    // Track Submit / Lead
+    form.addEventListener('submit', function(e) {
+      if (!form.checkValidity()) return; // Não dispara se o HTML5 validation barrar
+
+      // Evento de Lead Genérico
+      trackEvent('form_submit', { form_id: form.id });
+      trackEvent('Lead', { form_id: form.id });
+      
+      // Evento de Lead Específico
+      if (isLimpeza) {
+        trackEvent('lead_limpeza', { form_id: form.id });
+      } else if (isCop) {
+        trackEvent('lead_copeiragem', { form_id: form.id });
+      }
+      
+      // NOTA: O form.submit() continua o envio normal e redireciona para a página de Obrigado.
+    });
+  });
+})();
+
+/* =============================================
+   6. UI UTILS & MISC
+   ============================================= */
+// Footer Year
 document.querySelectorAll('[data-year]').forEach(function(el) {
   el.textContent = new Date().getFullYear();
 });
 
-/* =============================================
-   STICKY HEADER SHADOW
-   ============================================= */
-(function() {
-  var header = document.querySelector('.site-header, .lp-header');
-  if (!header) return;
-  function onScroll() {
-    header.classList.toggle('scrolled', window.scrollY > 10);
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-})();
-
-/* =============================================
-   MOBILE MENU TOGGLE (Home only)
-   ============================================= */
-(function() {
-  var btn  = document.getElementById('hamburger-btn');
-  var menu = document.getElementById('mobile-menu');
-  if (!btn || !menu) return;
-  btn.addEventListener('click', function() {
-    var open = menu.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-hidden', String(!open));
-  });
-  menu.querySelectorAll('.mob-a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      menu.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      menu.setAttribute('aria-hidden', 'true');
-    });
-  });
-})();
-
-/* =============================================
-   SCROLL ANIMATIONS
-   ============================================= */
-(function() {
-  var els = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
-  if (!els.length || !('IntersectionObserver' in window)) {
-    els.forEach(function(el) { el.classList.add('vis'); });
-    return;
-  }
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('vis');
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-  els.forEach(function(el) { obs.observe(el); });
-})();
-
-/* =============================================
-   FAQ ACCORDION
-   ============================================= */
-(function() {
-  var btns = document.querySelectorAll('.faq-btn');
-  btns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      var answerId = btn.getAttribute('aria-controls');
-      var answer   = answerId ? document.getElementById(answerId) : null;
-      // Close all
-      btns.forEach(function(b) {
-        b.setAttribute('aria-expanded', 'false');
-        var id = b.getAttribute('aria-controls');
-        var a  = id ? document.getElementById(id) : null;
-        if (a) a.hidden = true;
-      });
-      // Toggle current
-      if (!expanded) {
-        btn.setAttribute('aria-expanded', 'true');
-        if (answer) answer.hidden = false;
-      }
-    });
-  });
-})();
-
-/* =============================================
-   SMOOTH SCROLL (anchor links)
-   ============================================= */
-(function() {
-  var HEADER_H = 70;
-  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-    a.addEventListener('click', function(e) {
-      var id = a.getAttribute('href').slice(1);
-      if (!id) return;
-      var target = document.getElementById(id);
-      if (!target) return;
-      e.preventDefault();
-      var top = target.getBoundingClientRect().top + window.scrollY - HEADER_H - 12;
-      window.scrollTo({ top: top, behavior: 'smooth' });
-    });
-  });
-})();
-
-/* =============================================
-   CONTACT FORM HANDLER (shared)
-   ============================================= */
-(function() {
-  var forms = document.querySelectorAll('.contact-form');
-  forms.forEach(function(form) {
-    var successEl = form.parentElement.querySelector('.form-success');
-    var submitBtn = form.querySelector('[type="submit"]');
-
-    // Track form start on first input
-    var started = false;
-    form.addEventListener('input', function() {
-      if (!started) {
-        started = true;
-        trackEvent('meta_form_start', { form_id: form.id || 'contact' });
-      }
-    }, { once: false });
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Validate required fields
-      var required = form.querySelectorAll('[required]');
-      var valid = true;
-      required.forEach(function(field) {
-        field.classList.remove('error');
-        if (!field.value.trim()) {
-          field.classList.add('error');
-          valid = false;
-        }
-      });
-
-      if (!valid) {
-        var firstError = form.querySelector('.error');
-        if (firstError) firstError.focus();
-        return;
-      }
-
-      // Track submit
-      trackEvent('meta_form_submit', { form_id: form.id || 'contact' });
-      var isLimpeza = form.id === 'form-limpeza';
-      trackEvent(isLimpeza ? 'lead_limpeza' : 'lead_copeiragem', { form_id: form.id || 'contact' });
-
-      // Disable submit
-      var origHTML = submitBtn.innerHTML;
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Enviando<span style="letter-spacing:.05em">...</span>';
-
-      // Simulate async (replace with real endpoint)
-      setTimeout(function() {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = origHTML;
-        if (successEl) {
-          form.hidden = true;
-          successEl.hidden = false;
-          successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 900);
-    });
-  });
-})();
-
-/* =============================================
-   PHONE MASK — WhatsApp fields
-   ============================================= */
+// Phone Mask
 (function() {
   document.querySelectorAll('[data-mask="phone"]').forEach(function(field) {
     field.addEventListener('input', function() {
@@ -230,76 +199,25 @@ document.querySelectorAll('[data-year]').forEach(function(el) {
   });
 })();
 
-/* =============================================
-   TRACKING — CTA CLICK EVENTS & DYNAMIC WA
-   ============================================= */
+// Scroll animations
 (function() {
-  // Setup Dynamic WhatsApp Message based on UTM
-  var campaign = (sessionStorage.getItem('utm_campaign') || '').toLowerCase();
-  var defaultMsgLimpeza = "Olá! Vim pelo anúncio e gostaria de entender como funciona a terceirização de limpeza para minha empresa.";
-  var defaultMsgCop = "Olá! Vim pelo anúncio e gostaria de solicitar uma proposta de copeiragem corporativa.";
-  
-  var dynamicMsg = defaultMsgLimpeza;
-  if (campaign.indexOf('clinica') !== -1) {
-    dynamicMsg = "Olá! Vim pelo anúncio e gostaria de saber sobre limpeza comercial para minha clínica.";
-  } else if (campaign.indexOf('escritorio') !== -1) {
-    dynamicMsg = "Olá! Vim pelo anúncio e gostaria de saber sobre limpeza comercial para meu escritório.";
+  var els = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+  if (!els.length || !('IntersectionObserver' in window)) {
+    els.forEach(function(el) { el.classList.add('vis'); });
+    return;
   }
-
-  // WhatsApp links
-  document.querySelectorAll('[data-track="whatsapp"]').forEach(function(el) {
-    var href = el.getAttribute('href');
-    if (href && href.indexOf('wa.me') !== -1) {
-      var baseWa = href.split('?')[0];
-      var isCop = el.id.indexOf('cop') !== -1 || window.location.pathname.indexOf('copeiragem') !== -1;
-      el.setAttribute('href', baseWa + '?text=' + encodeURIComponent(isCop ? defaultMsgCop : dynamicMsg));
-    }
-
-    el.addEventListener('click', function() {
-      trackEvent('meta_click_whatsapp', { location: el.getAttribute('data-loc') || 'unknown' });
-      var isCop = el.id.indexOf('cop') !== -1 || window.location.pathname.indexOf('copeiragem') !== -1;
-      trackEvent(isCop ? 'whatsapp_copeiragem' : 'whatsapp_limpeza', { location: el.getAttribute('data-loc') || 'unknown' });
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('vis');
+        obs.unobserve(e.target);
+      }
     });
-  });
-  // Orçamento CTAs
-  document.querySelectorAll('[data-track="orcamento"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      trackEvent('click_orcamento', {
-        location: el.getAttribute('data-loc') || 'unknown'
-      });
-    });
-  });
-  // Phone / email
-  document.querySelectorAll('[data-track="phone"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      trackEvent('click_phone', {
-        location: el.getAttribute('data-loc') || 'unknown'
-      });
-    });
-  });
+  }, { threshold: 0.1 });
+  els.forEach(function(el) { obs.observe(el); });
 })();
 
-/* =============================================
-   ACTIVE NAV LINK ON SCROLL (Home)
-   ============================================= */
-(function() {
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('.nav-a');
-  if (!sections.length || !navLinks.length) return;
-  window.addEventListener('scroll', function() {
-    var current = '';
-    sections.forEach(function(s) {
-      if (s.getBoundingClientRect().top <= 80) current = s.id;
-    });
-    navLinks.forEach(function(a) {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  }, { passive: true });
-})();
-
-/* =============================================
-   FAQ ACCORDION
-   ============================================= */
+// FAQ Accordion
 (function() {
   document.querySelectorAll('.faq-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
