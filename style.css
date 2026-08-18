@@ -1060,11 +1060,16 @@ h1.lp-h1{
   .mission-grid{grid-template-columns:1fr}
 }
 
-/* Hero Mobile Image Reordering */
+/* Hero Mobile Image Reordering & Centering */
 @media (max-width: 768px) {
   .hero-img-desktop { display: none !important; }
   .hero-img-mobile { display: block !important; margin: 24px 0; }
   .hero-img-mobile img { width: 100%; border-radius: 20px; box-shadow: var(--sh-lg); max-width: 540px; margin: 0 auto; display: block; }
+  
+  /* Centralization fixes for buttons and images */
+  .lp-hero-cta { width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .lp-hero-cta .btn, .hero-cta-row .btn { width: 100%; max-width: 540px; justify-content: center; }
+  .lp-hero-inner { text-align: center !important; align-items: center !important; }
 }
 @media (min-width: 769px) {
   .hero-img-mobile { display: none !important; }
