@@ -26,13 +26,16 @@
     var isLimpeza = window.location.pathname.indexOf('limpeza') !== -1;
     var isCop = window.location.pathname.indexOf('copeiragem') !== -1;
     
-    // Dispara PageView genérico
-    trackEvent('PageView');
-    
     // Dispara ViewContent específico se for Landing Page
-    if (isLimpeza || isCop) {
+    if (isLimpeza) {
       trackEvent('ViewContent', { 
-        content_name: isLimpeza ? 'LP Limpeza Comercial' : 'LP Copeiragem Corporativa' 
+        content_name: 'Limpeza Comercial',
+        content_category: 'Serviços'
+      });
+    } else if (isCop) {
+      trackEvent('ViewContent', { 
+        content_name: 'Copeiragem Corporativa',
+        content_category: 'Serviços'
       });
     }
   }, 300);
@@ -113,25 +116,21 @@ function trackEvent(eventName, params) {
   }
 
   // Aplicar a mensagem em todos os links do WhatsApp
-  document.querySelectorAll('[data-track="whatsapp"]').forEach(function(el) {
-    var href = el.getAttribute('href');
-    if (href && href.indexOf('wa.me') !== -1) {
-      var baseWa = href.split('?')[0];
-      el.setAttribute('href', baseWa + '?text=' + encodeURIComponent(dynamicMsg));
-    }
-
-    el.addEventListener('click', function() {
-      // Evento genérico
-      trackEvent('click_whatsapp', { location: el.getAttribute('data-loc') || 'unknown' });
-      trackEvent('Contact', { method: 'whatsapp' });
-      
-      // Evento específico por LP
-      if (isLimpeza) {
-        trackEvent('whatsapp_limpeza', { location: el.getAttribute('data-loc') || 'unknown' });
-      } else if (isCop) {
-        trackEvent('whatsapp_copeiragem', { location: el.getAttribute('data-loc') || 'unknown' });
+  document.querySelectorAll('a').forEach(function(el) {
+    var href = el.getAttribute('href') || '';
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
+      // Set dynamic message for links that don't have text already? 
+      // User requested not to change other things, so let's only append text if it's our original dynamic logic
+      if (el.hasAttribute('data-track') && el.getAttribute('data-track') === 'whatsapp') {
+          var baseWa = href.split('?')[0];
+          el.setAttribute('href', baseWa + '?text=' + encodeURIComponent(dynamicMsg));
       }
-    });
+
+      el.addEventListener('click', function() {
+        // Disparo único e limpo exigido para WhatsApp
+        trackEvent('Contact');
+      });
+    }
   });
 })();
 
@@ -193,13 +192,9 @@ function trackEvent(eventName, params) {
       var waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(mensagem);
 
       // Tracking
-      trackEvent('form_submit', { form_id: form.id });
-      trackEvent('Lead', { form_id: form.id });
-      if (isLimpeza) {
-        trackEvent('lead_limpeza', { form_id: form.id });
-      } else if (isCop) {
-        trackEvent('lead_copeiragem', { form_id: form.id });
-      }
+      trackEvent('form_submit', { form_id: form.id }); // Evento customizado mantido
+      trackEvent('Lead'); // Disparo limpo exigido pelo Meta
+      // (Removidos lead_limpeza e lead_copeiragem duplicados)
 
       // Abre o WhatsApp
       window.open(waUrl, '_blank');
