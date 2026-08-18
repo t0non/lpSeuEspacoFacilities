@@ -1059,3 +1059,13 @@ h1.lp-h1{
   .inst-cta-btns .btn{width:100%;max-width:340px;justify-content:center}
   .mission-grid{grid-template-columns:1fr}
 }
+
+/* Hero Mobile Image Reordering */
+@media (max-width: 768px) {
+  .hero-img-desktop { display: none !important; }
+  .hero-img-mobile { display: block !important; margin: 24px 0; }
+  .hero-img-mobile img { width: 100%; border-radius: 20px; box-shadow: var(--sh-lg); max-width: 540px; margin: 0 auto; display: block; }
+}
+@media (min-width: 769px) {
+  .hero-img-mobile { display: none !important; }
+}
