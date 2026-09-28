@@ -296,3 +296,66 @@ document.querySelectorAll('[data-year]').forEach(function(el) {
     if (hPath === path) a.classList.add('nav-active');
   });
 })();
+
+/* =============================================
+   8. QUIZ CTA — QUALIFICAÇÃO DE LEAD
+   ============================================= */
+(function() {
+  var WA_NUMBER = '5511988259447';
+
+  var step1    = document.getElementById('quiz-step-1');
+  var step2    = document.getElementById('quiz-step-2');
+  var stepEmp  = document.getElementById('quiz-step-emprego');
+
+  if (!step1) return; // quiz não está na página
+
+  function showStep(el) {
+    [step1, step2, stepEmp].forEach(function(s) { s.classList.add('quiz-step--hidden'); });
+    el.classList.remove('quiz-step--hidden');
+  }
+
+  // Mensagens por serviço
+  var msgs = {
+    limpeza:    'Olá! Gostaria de solicitar uma proposta de limpeza comercial para minha empresa.',
+    copeiragem: 'Olá! Gostaria de solicitar uma proposta de copeiragem corporativa para minha empresa.',
+    facilities: 'Olá! Gostaria de solicitar uma proposta de facilities / terceirização para minha empresa.',
+    outro:      'Olá! Gostaria de conhecer as soluções da Seu Espaço Facilities para minha empresa.'
+  };
+
+  // PASSO 1 — O que você busca?
+  document.getElementById('quiz-opt-contratar').addEventListener('click', function() {
+    this.classList.add('selected');
+    trackEvent('quiz_step1', { escolha: 'contratar' });
+    setTimeout(function() { showStep(step2); }, 150);
+  });
+
+  document.getElementById('quiz-opt-emprego').addEventListener('click', function() {
+    this.classList.add('selected');
+    trackEvent('quiz_step1', { escolha: 'emprego' });
+    setTimeout(function() { showStep(stepEmp); }, 150);
+  });
+
+  // PASSO 2 — Qual serviço?
+  ['limpeza', 'copeiragem', 'facilities', 'outro'].forEach(function(servico) {
+    var btn = document.getElementById('quiz-opt-' + servico);
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      btn.classList.add('selected');
+      trackEvent('quiz_step2', { servico: servico });
+      trackEvent('Lead');
+      var msg = msgs[servico] || msgs.outro;
+      var waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+      setTimeout(function() { window.open(waUrl, '_blank'); }, 200);
+    });
+  });
+
+  // Botões voltar
+  document.getElementById('quiz-back-2').addEventListener('click', function() {
+    document.querySelectorAll('.quiz-option').forEach(function(b) { b.classList.remove('selected'); });
+    showStep(step1);
+  });
+  document.getElementById('quiz-back-emprego').addEventListener('click', function() {
+    document.querySelectorAll('.quiz-option').forEach(function(b) { b.classList.remove('selected'); });
+    showStep(step1);
+  });
+})();

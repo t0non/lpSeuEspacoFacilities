@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicite uma Proposta | Seu Espaço Facilities</title>
+  <meta name="description" content="Solicite uma proposta de limpeza comercial, copeiragem ou facilities para sua empresa em São Paulo." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '850093298071051');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=850093298071051&ev=PageView&noscript=1" /></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: #f5f6f8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 16px 64px;
+      color: #111827;
+    }
+
+    /* ── Topo com logo ── */
+    .top-logo {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .top-logo img {
+      height: 52px;
+      width: auto;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 44px;
+      width: 100%;
+      max-width: 560px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    }
+
+    /* ── Progresso ── */
+    .progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .progress-track {
+      flex: 1;
+      height: 5px;
+      background: #e9eaec;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #1a6fc4;
+      border-radius: 99px;
+      transition: width .4s ease;
+    }
+    .progress-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #9ca3af;
+      white-space: nowrap;
+    }
+
+    /* ── Step ── */
+    .step { animation: fadeIn .25s ease both; }
+    .step--hidden { display: none !important; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Pergunta ── */
+    .step-q {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+
+    /* ── Opções ── */
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .opt {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 2px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 16px 18px;
+      background: #fff;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      color: #374151;
+      text-align: left;
+      transition: border-color .18s, background .18s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .opt:hover {
+      border-color: #1a6fc4;
+      background: #f0f6ff;
+    }
+    .opt.selected {
+      border-color: #1a6fc4;
+      background: #f0f6ff;
+      color: #1a4e8a;
+    }
+    .opt-icon { font-size: 22px; flex-shrink: 0; line-height: 1; }
+
+    /* ── Voltar ── */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      color: #9ca3af;
+      padding: 0;
+      margin-bottom: 24px;
+      transition: color .15s;
+    }
+    .back-btn:hover { color: #374151; }
+
+    /* ── Resultado emprego ── */
+    .result {
+      text-align: center;
+      padding: 16px 0 8px;
+    }
+    .result-emoji { font-size: 48px; margin-bottom: 16px; line-height: 1; }
+    .result-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+    .result-text {
+      font-size: 15px;
+      color: #6b7280;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .result-text strong { color: #374151; }
+
+    /* ── Botão e-mail ── */
+    .btn-email {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #f3f4f6;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 14px 24px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      color: #374151;
+      text-decoration: none;
+      cursor: pointer;
+      width: 100%;
+      transition: background .15s, border-color .15s;
+    }
+    .btn-email:hover {
+      background: #e5e7eb;
+      border-color: #d1d5db;
+    }
+
+    .back-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    /* ── Rodapé ── */
+    .page-footer {
+      margin-top: 28px;
+      font-size: 12px;
+      color: #9ca3af;
+      text-align: center;
+      line-height: 1.8;
+    }
+    .page-footer a { color: #6b7280; text-decoration: none; }
+    .page-footer a:hover { color: #374151; }
+
+    /* ── Mobile ── */
+    @media (max-width: 480px) {
+      .card { padding: 32px 22px; }
+      .step-q { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="top-logo">
+    <a href="/" aria-label="Seu Espaço Facilities — Voltar ao site">
+      <img src="/images/logo.png" alt="Seu Espaço Facilities" />
+    </a>
+  </div>
+
+  <!-- Card -->
+  <div class="card">
+
+    <!-- Progresso -->
+    <div class="progress-wrap">
+      <div class="progress-track">
+        <div class="progress-fill" id="prog-fill" style="width:0%"></div>
+      </div>
+      <span class="progress-label" id="prog-label">Pergunta 1 de 2</span>
+    </div>
+
+    <!-- PASSO 1 — O que você busca? -->
+    <div class="step" id="step-1" aria-live="polite">
+      <p class="step-q">Você está buscando:</p>
+      <div class="options">
+        <button class="opt" id="opt-contratar" type="button">
+          <span class="opt-icon">🏢</span>
+          Contratar serviços para minha empresa
+        </button>
+        <button class="opt" id="opt-emprego" type="button">
+          <span class="opt-icon">💼</span>
+          Estou procurando emprego
+        </button>
+      </div>
+    </div>
+
+    <!-- PASSO 2 — Qual serviço? -->
+    <div class="step step--hidden" id="step-2" aria-live="polite">
+      <button class="back-btn" id="back-2" type="button" aria-label="Voltar">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Voltar
+      </button>
+      <p class="step-q">Qual serviço você precisa?</p>
+      <div class="options">
+        <button class="opt" id="opt-limpeza" type="button">
+          <span class="opt-icon">🧹</span>
+          Limpeza comercial
+        </button>
+        <button class="opt" id="opt-copeiragem" type="button">
+          <span class="opt-icon">☕</span>
+          Copeiragem
+        </button>
+        <button class="opt" id="opt-facilities" type="button">
+          <span class="opt-icon">🏗️</span>
+          Facilities / Terceirização
+        </button>
+        <button class="opt" id="opt-outro" type="button">
+          <span class="opt-icon">💬</span>
+          Outro
+        </button>
+      </div>
+    </div>
+
+    <!-- RESULTADO — Não estamos contratando -->
+    <div class="step step--hidden" id="step-emprego" aria-live="polite">
+      <div class="result">
+        <div class="result-emoji">😊</div>
+        <h2 class="result-title">Obrigado pelo interesse!</h2>
+        <p class="result-text">
+          No momento <strong>não temos vagas abertas</strong>.<br>
+          Se quiser, envie seu currículo e entramos em contato quando houver oportunidades.
+        </p>
+        <a href="mailto:contato@seuespacolpo.com.br?subject=Currículo%20para%20análise%20futura" class="btn-email" id="btn-curriculo">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Enviar currículo por e-mail
+        </a>
+        <div class="back-center">
+          <button class="back-btn" id="back-emprego" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+            Voltar ao início
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /card -->
+
+  <footer class="page-footer">
+    <p>© <span id="footer-year"></span> Seu Espaço Facilities · São Paulo – SP</p>
+    <p><a href="/">Voltar ao site</a> · <a href="mailto:contato@seuespacolpo.com.br">contato@seuespacolpo.com.br</a></p>
+  </footer>
+
+  <script>
+    'use strict';
+
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // UTMs
+    (function() {
+      var p = new URLSearchParams(window.location.search);
+      ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid'].forEach(function(k) {
+        if (p.has(k)) sessionStorage.setItem(k, p.get(k));
+      });
+    })();
+
+    function trackEvent(name, data) {
+      data = data || {};
+      ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid'].forEach(function(k) {
+        var v = sessionStorage.getItem(k); if (v) data[k] = v;
+      });
+      if (typeof dataLayer !== 'undefined') dataLayer.push(Object.assign({ event: name }, data));
+      if (typeof gtag === 'function') gtag('event', name, data);
+      if (typeof fbq === 'function') {
+        ['PageView','Lead','ViewContent','Contact'].indexOf(name) !== -1
+          ? fbq('track', name, data) : fbq('trackCustom', name, data);
+      }
+      if (['localhost','127.0.0.1'].indexOf(location.hostname) !== -1)
+        console.log('[Track]', name, data);
+    }
+
+    // Quiz
+    (function() {
+      var WA = '5511988259447';
+      var s1  = document.getElementById('step-1');
+      var s2  = document.getElementById('step-2');
+      var sEmp= document.getElementById('step-emprego');
+      var fill= document.getElementById('prog-fill');
+      var lbl = document.getElementById('prog-label');
+
+      var msgs = {
+        limpeza:    'Olá! Gostaria de solicitar uma proposta de limpeza comercial para minha empresa.',
+        copeiragem: 'Olá! Gostaria de solicitar uma proposta de copeiragem corporativa para minha empresa.',
+        facilities: 'Olá! Gostaria de solicitar uma proposta de facilities / terceirização para minha empresa.',
+        outro:      'Olá! Gostaria de conhecer as soluções da Seu Espaço Facilities para minha empresa.'
+      };
+
+      function show(el) {
+        [s1, s2, sEmp].forEach(function(e) { e.classList.add('step--hidden'); });
+        el.classList.remove('step--hidden');
+      }
+      function progress(pct, text) {
+        fill.style.width = pct + '%';
+        lbl.textContent  = text;
+      }
+      function reset() {
+        document.querySelectorAll('.opt').forEach(function(b) { b.classList.remove('selected'); });
+      }
+
+      document.getElementById('opt-contratar').addEventListener('click', function() {
+        this.classList.add('selected');
+        trackEvent('quiz_step1', { escolha: 'contratar' });
+        progress(50, 'Pergunta 2 de 2');
+        setTimeout(function() { show(s2); }, 160);
+      });
+
+      document.getElementById('opt-emprego').addEventListener('click', function() {
+        this.classList.add('selected');
+        trackEvent('quiz_step1', { escolha: 'emprego' });
+        progress(100, 'Concluído');
+        setTimeout(function() { show(sEmp); }, 160);
+      });
+
+      ['limpeza','copeiragem','facilities','outro'].forEach(function(sv) {
+        var btn = document.getElementById('opt-' + sv);
+        if (!btn) return;
+        btn.addEventListener('click', function() {
+          btn.classList.add('selected');
+          trackEvent('quiz_step2', { servico: sv });
+          trackEvent('Lead');
+          progress(100, 'Concluído');
+          var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msgs[sv]);
+          setTimeout(function() { window.open(url, '_blank'); }, 200);
+        });
+      });
+
+      document.getElementById('back-2').addEventListener('click', function() {
+        reset(); progress(0, 'Pergunta 1 de 2'); show(s1);
+      });
+      document.getElementById('back-emprego').addEventListener('click', function() {
+        reset(); progress(0, 'Pergunta 1 de 2'); show(s1);
+      });
+    })();
+  </script>
+
+</body>
+</html>
